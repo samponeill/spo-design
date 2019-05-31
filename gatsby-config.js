@@ -49,7 +49,8 @@ module.exports = {
           'article',
           'user',
           'tag',
-          'page'
+          'page',
+          'logo'
         ],
         queryLimit: 1000,
       },

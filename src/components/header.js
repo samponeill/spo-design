@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Logo from "./logo"
 
 const Header = ({ siteTitle, menuLinks, tagline }) => (
 
@@ -8,15 +9,9 @@ const Header = ({ siteTitle, menuLinks, tagline }) => (
   <nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
     <div className="container is-fluid">
       <div class="navbar-brand">
-      <Link className="navbar-item logo" to="/">
-          <h1 className="brand">
-              {siteTitle}
-          </h1>
-          <h2 className="tagline">
-              {tagline}
-          </h2>
+        <Link className="navbar-item logo" to="/">
+          <Logo />
         </Link>
-
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true">
           {menuLinks.map(link =>
