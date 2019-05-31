@@ -10,9 +10,9 @@
 
 Kick off your project with this default boilerplate with Bulma and Strapi integration. This starter ships with the main Gatsby configuration files rigged for making a blog site with Strapi styled with Bulma for easy customisation.
 
-## 🚀 Quick start
+## Installation
 
-1.  **Create a Gatsby site.**
+1.  **Create Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
