@@ -8,9 +8,7 @@
   Gatsby's default starter + Strapi + Bulma
 </h1>
 
-Kick off your project with this default boilerplate with Bulma and Strapi integration. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Kick off your project with this default boilerplate with Bulma and Strapi integration. This starter ships with the main Gatsby configuration files rigged for making a blog site with Strapi styled with Bulma for easy customisation.
 
 ## 🚀 Quick start
 
@@ -19,16 +17,28 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new Gatsby site using this starter
+    gatsby new gatsby-strapi-bulma-blog https://github.com/samponeill/gatsby-strapi-bulma.git
+    cd gatsby-strapi-bulma-blog/
+    npm install --save-dev
     ```
 
-1.  **Start developing.**
+1. **Get Strapi**
+    Follow instructions here:
+    https://strapi.io/documentation/3.x.x/getting-started/quick-start.html#_1-install-strapi-globally
+
+    Install a Strapi cms in your project folder next to the Gatsby blog 
+    
+    ```sh    
+    strapi new cms --quickstart
+    ```
+
+1.  **Create user & set up content manager**
 
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd gatsby-strapi-bulma-blog/
     gatsby develop
     ```
 
