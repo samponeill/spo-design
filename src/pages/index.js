@@ -24,13 +24,17 @@ const IndexPage = ({ data }) => (
       <div className="column is-two-thirds is-parent">
       {data.allStrapiArticle.edges.map(document => (
         <Link to={`articles/` + slugify(document.node.title)}>
-          <article key={document.node.id} className="is-child box">
-            <Img fluid={document.node.image.childImageSharp.fluid} class="image" alt="." />
-              <h3 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h3>
-              <h4 className="subtitle">
-                {document.node.standfirst}
-              </h4>        
-          </article>
+          <div className="section">
+            <div className="container">
+              <article key={document.node.id} className="is-child box">
+                <Img fluid={document.node.image.childImageSharp.fluid} class="image" alt="." />
+                  <h3 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h3>
+                  <h4 className="subtitle">
+                    {document.node.standfirst}
+                  </h4>        
+              </article>
+            </div>
+          </div>
         </Link>          
       ))}
       </div>
