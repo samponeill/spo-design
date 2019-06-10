@@ -6,7 +6,7 @@ import Carousel from './carousels'
 
 
 const Content = () => (
-          <div className="grid">
+          <div>
             <div className="container">
             </div>
             <div className="container item">

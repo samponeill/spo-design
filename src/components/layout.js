@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
       <Background></Background>
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.tagline} />
         <div>
-          <main className="section">{children}</main>
+          <main className="section grid">{children}</main>
           <Footer></Footer>
         </div>
       </>
