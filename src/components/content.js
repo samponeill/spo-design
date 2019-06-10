@@ -6,6 +6,7 @@ import Carousel from './carousels'
 
 
 const Content = () => (
+            <>
             <div className="container">
             </div>
             <div className="container item">
@@ -95,6 +96,7 @@ const Content = () => (
             </form>
             </div>
             <div className="container"></div>
+            </>
       );
 
   export default Content
