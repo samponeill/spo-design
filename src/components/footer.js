@@ -1,15 +1,9 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Logo from "./logo"
+import React from 'react'
 
-const Header = () => (
-<header className="grid">
+const Footer = () => (
+<footer className="grid">
 <div className="container"></div>
 <div className="container">
-<div className="column">
-  <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
-</div>
   <div className="chunk">
     <div className="navigation">
       <ul className="navbar">
@@ -24,19 +18,7 @@ const Header = () => (
   </div>
 </div>
 <div className="container"></div>
-</header>
-)
+</footer>
+      );
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-  menuLinks: PropTypes.string,
-  tagline: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-  menuLinks: ``,  
-  tagline: ``,  
-}
-
-export default Header
+  export default Footer

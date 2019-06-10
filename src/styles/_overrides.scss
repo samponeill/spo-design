@@ -1,9 +1,52 @@
-// BULMA VARIABLE OVER-RIDES
+// Fonts
 
-$family-secondary: 'omnes-semicond', helvetica, arial, sans-serif;
-$font-logo: 'bebas-neue', helvetica, arial, sans-serif;
-$family-primary: 'yrsa', serif;
+$font-primary: "ff-tisa-web-pro", serif;
+$font-secondary: "fieldwork-hum", helvetica, arial, sans-serif;
+$font-code: "source-code-pro", courier, monospace;
 
-.navbar-item img {
-    max-height: 100%;
+
+//Theme colours
+
+$primary: #333333;
+$secondary: blue;
+$actionprimary: green;
+$actionsecondary: darkgreen;
+$warning: orange;
+$danger: darkred;
+$background: white;
+$altbackground: lightgray;
+$border: darkslategrey;
+
+
+//Sizes
+ 
+$size1: 1.8rem;
+$size2: 2rem;
+$size3: 2.25rem;
+$size4: 2.5em;
+$size5: 3rem;
+$size6: 4rem;
+$size7: 5rem;
+$size8: 6rem;
+$size9: 7rem;
+
+//Transitions
+
+$bubbleanim: translateY(0);
+
+//Borders
+
+$borderstyle: 2px solid;
+$rad: 5px;
+
+//Box shadow
+
+@mixin boxshadow($h: 0px, $v: 6px, $b: 8px, $s: -2px, $brand-color: $altbackground){
+    -webkit-box-shadow : $h $v $b $s $brand-color;
+    -moz-box-shadow : $h $v $b $s $brand-color;
+    box-shadow : $h $v $b $s $brand-color;
+}
+
+.bubble, button {
+    @include boxshadow();
 }

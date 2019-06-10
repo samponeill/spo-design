@@ -26,8 +26,10 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",
+    "react-slick": "^0.24.0",
     "react-slugify": "^1.2.0",
-    "react-text-truncate": "^0.14.1"
+    "react-text-truncate": "^0.14.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",

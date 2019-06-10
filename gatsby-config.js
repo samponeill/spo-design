@@ -2,9 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: 'Bifl Tips',
-    description: 'The place to find the best buy-it-for-life goods',
-    tagline: '[buy it for life]',
+    title: 'SPO Design Co.',
+    description: 'Design agency specialising in branding, marketing and websites for small businesses ',
+    tagline: 'Straigtforward design for small businesses',
     author: "Sam O'Neill",
     menuLinks:[
       {
@@ -12,12 +12,12 @@ module.exports = {
         link:'/'
       },
       {
-        name:'categories',
-        link:'/tags'
+        name:'about',
+        link:'/#about'
       },
       {
-        name:'about',
-        link:'/about'
+        name:'services',
+        link:'/#services'
       }      
       ]    
   },
@@ -50,6 +50,7 @@ module.exports = {
           'user',
           'tag',
           'page',
+          'background',
           'logo'
         ],
         queryLimit: 1000,

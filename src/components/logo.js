@@ -9,7 +9,7 @@ const Logo = ({ children }) => (
         strapiLogo {
           logo {
             childImageSharp {
-                fixed(width: 100) {
+                fixed(height: 65) {
                     ...GatsbyImageSharpFixed
                 }
             }
@@ -21,8 +21,7 @@ const Logo = ({ children }) => (
     `}
     render={data => (
       <>
-      <Img alt={data.strapiLogo.alt} fixed={data.strapiLogo.logo.childImageSharp.fixed} />
-      <p>{data.strapiLogo.strapline}</p>
+      <Img alt={data.strapiLogo.alt} alt="SPO Design Co logo" style={{margin: '6rem auto 3rem'}} fixed={data.strapiLogo.logo.childImageSharp.fixed} />
       </>
     )}
   />
