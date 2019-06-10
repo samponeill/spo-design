@@ -73,10 +73,18 @@ const Content = () => (
                 <h2>Get in touch</h2>
               </div>
 
-            <form id="#message_form" style={{marginBottom: '10rem'}} name="contact" method="POST" data-netlify="true"> 
-
+            <form
+            id="#message_form" 
+            style={{marginBottom: '10rem'}}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"> 
+                <div className="hidden">
+                  <label>I am a robot<input name="bot-field" /></label>
+                </div>
                 <div className="chunk">
-                  <label htmlFor="Name">Name*</label>        
+                  <label htmlFor="Name">Name*</label>
                   <input arial-label="name" id="name" required type="text" name="name" style={{width: '100%'}} />
                 </div>     
                 <div className="chunk">
