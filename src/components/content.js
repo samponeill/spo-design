@@ -73,7 +73,7 @@ const Content = () => (
                 <h2>Get in touch</h2>
               </div>
 
-            <form id="#message_form" style={{marginBottom: '10rem'}} method="POST" name="contactform" action="contact-form-handler.php"> 
+            <form id="#message_form" style={{marginBottom: '10rem'}} name="contact" method="POST" data-netlify="true"> 
 
                 <div className="chunk">
                   <label htmlFor="Name">Name*</label>        
