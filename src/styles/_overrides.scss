@@ -47,6 +47,6 @@ $rad: 5px;
     box-shadow : $h $v $b $s $brand-color;
 }
 
-.bubble, button {
+.shadow, .bubble, button {
     @include boxshadow();
 }

@@ -16,8 +16,7 @@ function slugify(text)
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
-    <div className="grid">
-      <div className="container"></div>
+    <main>
       <div className="container">
         <article style={{marginTop: "3rem"}} className="bubble column blog">
             <div className="">
@@ -40,8 +39,7 @@ const ArticleTemplate = ({ data }) => (
           </div>
         </article>
       </div>
-      <div className="container"></div>
-      </div>
+      </main>
   </Layout>
 )
 

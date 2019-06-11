@@ -26,8 +26,10 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",
+    "react-pose": "^4.0.8",
     "react-slick": "^0.24.0",
     "react-slugify": "^1.2.0",
+    "react-spring": "^8.0.23",
     "react-text-truncate": "^0.14.1",
     "slick-carousel": "^1.8.1"
   },

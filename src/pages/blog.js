@@ -16,8 +16,7 @@ function slugify(text)
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className="grid">
-      <div className="container"></div>
+    <main>
         <div className="container">
           <div className="chunk" style={{marginTop: '1rem'}}>
             <h1>Buy it for life blog</h1>
@@ -34,7 +33,7 @@ const IndexPage = ({ data }) => (
                     <article key={document.node.id} className="">
                       <Img fluid={document.node.image.childImageSharp.fluid} class="image" alt="." />
                       <h3 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h3>
-                      <h4 className="subtitle">
+                      <h4 className="standfirst">
                         {document.node.standfirst}
                       </h4>        
                     </article>
@@ -45,8 +44,7 @@ const IndexPage = ({ data }) => (
           </div>        
           ))}
       </div>
-      <div className="container"></div>
-    </div>
+    </main>
   </Layout>
 )
 

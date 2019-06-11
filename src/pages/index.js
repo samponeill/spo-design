@@ -7,9 +7,7 @@ import Content from '../components/content'
 
 const IndexPage = () => (
   <Layout>
-    <div>
-      <Content></Content>
-    </div>
+    <Content></Content>
   </Layout>
 )
 

@@ -4,10 +4,9 @@ import React from "react"
 import Logo from "./logo"
 
 const Header = () => (
-<header className="grid">
-<div className="container"></div>
+<header>
 <div className="container">
-<div className="column">
+<div className="chunk">
   <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
 </div>
   <div className="chunk">
@@ -23,7 +22,6 @@ const Header = () => (
     </div>        
   </div>
 </div>
-<div className="container"></div>
 </header>
 )
 

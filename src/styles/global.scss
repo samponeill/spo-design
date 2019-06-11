@@ -9,6 +9,7 @@ body {
     font-size: $size2; 
     line-height: 1.6;
     font-weight: 400;
+    text-align: left;
 }
  
 /* Headings
@@ -182,26 +183,54 @@ label > .label-body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .grid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}  
+  
+@media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 20vw 60vw 20vw;
+      grid-template-rows: auto 1fr auto;
+  
+    }
+}
+  
+header {
+    grid-column: span 3;
+    text-align: center;
+}
+  
+main {
+    flex: 1;
+    padding: 2rem;
+}
+  
+nav {
+    padding: 2rem;
+    visibility: hidden;
+}
+   
+aside {
+    padding: 2rem;
+}
+  
+footer {
+    grid-column: span 3;
+    padding: 2rem;
+    text-align: center;
+}
+
+.grid-form {
     display: grid;
-    grid-template-columns: 20vw 60vw 20vw;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      ". header ."
-      ". main ."
-      ". footer .";
-}
-
-.container {
-    padding: 0 4rem;
-}
-
-.item {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-.grid-half {
-
+    grid-template-columns: 1fr 1fr;
+    .form-container:first-child {
+        padding: 0 1rem 0 0;
+    } 
+    .form-container:last-child {
+        padding: 0 0 0 1rem;
+    } 
 }
 
 /* For devices larger than 400px */
@@ -219,8 +248,6 @@ label > .label-body {
 
 /* For devices larger than 680px */
 @media (min-width: 680px) {
-    .column {
-    }    
 }
 
 
@@ -292,7 +319,7 @@ li {
 .navigation ul li {
   margin: 0;
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
   text-align: center;
   font-weight: 600;
   letter-spacing: .25rem;
@@ -352,6 +379,7 @@ li {
         font-size: $size3;
     }
     .standfirst {
+        color: $primary;
         font-family: $font-primary;
         font-weight: 600;
         font-size: $size2;
@@ -510,6 +538,19 @@ p:last-child {
 blockquote {
   font-size: 2rem;
   margin-bottom: 1rem; 
+}
+
+blockquote {
+    display: block;
+    margin-block-start: 0rem;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin: 4rem 0 1rem 0;
+}
+
+cite {
+    margin-bottom: 4rem;
 }
 
 

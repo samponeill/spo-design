@@ -15,7 +15,7 @@ function slugify(text)
 
 const TagTemplate = ({ data }) => (
     <Layout>
-        <div className="grid">
+        <main>
         <div className="container"></div>
         <div className="container">         
           <div className="offset-by-three six columns" style={{marginTop: '1rem'}}>
@@ -24,7 +24,6 @@ const TagTemplate = ({ data }) => (
           <div className="offset-by-three six columns">
             <p>Everything with the {data.strapiTag.name} tag</p>
           </div>
-        </div>
         {data.strapiTag.articles.map(article => (
         <div>     
             <Link to={`articles/` + slugify(article.title)}>
@@ -34,7 +33,7 @@ const TagTemplate = ({ data }) => (
                     <article key={article.id} className="">
                         <Img fluid={article.image.childImageSharp.fluid} class="image" alt="." />
                         <h3 className="title"><Link to={`articles/` + slugify(article.title)}>{article.title}</Link></h3>
-                        <h4 className="subtitle">
+                        <h4 className="standfirst">
                           {article.standfirst}
                         </h4>        
                     </article>
@@ -44,8 +43,9 @@ const TagTemplate = ({ data }) => (
             </Link>          
           </div>
           ))}
+          </div>
           <div className="container"></div>
-        </div>
+        </main>
     </Layout>
   )
   

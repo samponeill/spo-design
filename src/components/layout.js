@@ -9,9 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
+import Background from "./background"
 import Header from "./header"
-import Background from "./background";
-import Footer from "./footer";
+import Nav from "./nav"
+import Aside from "./aside"
+import Footer from "./footer"
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,12 +34,14 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-      <Background></Background>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.tagline} />
-        <div>
+        <Background></Background>
+        <div className="grid">
+          <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.tagline} />
+          <Nav></Nav>
           {children}
-          <Footer></Footer>
-        </div>
+          <Aside></Aside>
+          <Footer></Footer>            
+        </div>        
       </>
     )}
   />
