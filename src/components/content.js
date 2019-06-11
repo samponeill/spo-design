@@ -12,7 +12,7 @@ const Content = () => (
               </div>
               <div className="chunk">
                 <p>Looking to develop a brand identity, new website or whip up some marketing materials? You've come to the right&nbsp;place.</p>
-                <a style={{border: 'none'}} href="#contact"><button className="button">Get in touch</button></a>
+                <a style={{border: 'none'}} href="#contact"><button className="shadow button">Get in touch</button></a>
               </div>
             <div className="divider chunk" id="about" />
             <div className="chunk">
@@ -31,21 +31,21 @@ const Content = () => (
                 <h3>Branding</h3>
                 <p>Branding done well doesn't have to cost the Earth. Our approach is simple. We'll chat about your target market and requirements, to-and-fro over the design, create a set of guidelines and Bob's your uncle.</p>
                 <p style={{display: 'none'}} className="prices">From £120</p>
-                <button style={{display: 'none'}} className="button">Find out more</button>
+                <button style={{display: 'none'}} className="shadow button">Find out more</button>
               </div>
             <div className="bubble chunk">
                 <img alt="Website icon in the shape of a wire globe" src={Websites} style={{maxHeight: '60px'}} />        
                 <h3>Websites</h3>
                 <p>Want to take your business to the next level or give an existing site a makeover? We can make blazing fast single-pagers (like the one you're looking at), spruce up a Shopify or Wix page or go totally bespoke.</p>
                 <p style={{display: 'none'}} className="prices">From £240</p>        
-                <button style={{display: 'none'}} className="button">Find out more</button>      
+                <button style={{display: 'none'}} className="shadow button">Find out more</button>      
               </div>
               <div className="bubble chunk">
                 <img alt="Marketing icon in the shape of an envelope" src={Marketing} style={{maxHeight: '60px'}} />        
                 <h3>Marketing</h3>
                 <p>We love getting eyeballs on our work – that's the name of the game. We can help with emails, digital display advertising, fliers, magazines, catalogues – you name it we can design it, get it out there and get it seen.</p>
                 <p style={{display: 'none'}} className="prices">From £50</p>
-                <button style={{display: 'none'}} className="button">Find out more</button>         
+                <button style={{display: 'none'}} className="shadow button">Find out more</button>         
               </div>      
             <Carousel></Carousel>            
             <div className="divider chunk" id="quotes" />
@@ -96,7 +96,7 @@ const Content = () => (
                   <label htmlFor="Message">Message*</label>
                   <textarea arial-label="Message box" style={{width: '100%', height: '16rem'}} name="message" cols={40} rows={15} defaultValue={""} />
                 </div>
-              <input arial-label="submit" id="contact-submit" defaultValue="submit" name="submit" type="submit" />
+              <input className="shadow" arial-label="submit" id="contact-submit" defaultValue="submit" name="submit" type="submit" />
               <label htmlFor="submit" />
             </form>
             </div>
