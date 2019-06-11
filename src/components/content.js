@@ -77,7 +77,7 @@ const Content = () => (
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"> 
-                <div className="hidden chunk">
+                <div style={{visibility: "hidden"}} className="hidden chunk">
                   <label htmlFor="bot-field">I am a robot</label>
                   <input type="text" name="bot-field" style={{width: '100%'}} />
                 </div>
