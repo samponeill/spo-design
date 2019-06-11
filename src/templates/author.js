@@ -15,7 +15,8 @@ function slugify(text)
 
 const UserTemplate = ({ data }) => (
     <Layout>
-            <div>
+            <div className="grid">
+            <div className="container"></div>
             <div className="container">         
               <div className="column" style={{marginTop: '1rem'}}>
                 <h1>{data.strapiUser.username}</h1>
@@ -25,7 +26,7 @@ const UserTemplate = ({ data }) => (
               </div>
             </div>
             {data.strapiUser.articles.map(article => (
-            <div className="container">     
+            <div>     
                 <Link to={`articles/` + slugify(article.title)}>
                   <div className="column bubble blog"> 
                     <div className="">
@@ -43,6 +44,7 @@ const UserTemplate = ({ data }) => (
                 </Link>          
               </div>
               ))}
+            <div className="container"></div>
             </div>
     </Layout>
   )
