@@ -278,7 +278,7 @@ footer {
     }
     header .nav.header-container {
       border-left: $borderstyle $border;
-      padding: 2rem 6rem 2rem 0;
+      padding: 2rem 6rem;
     }
     .grid-form {
         display: grid;
@@ -377,12 +377,11 @@ li {
 
 .navbar {
   margin-bottom: 0;
-  display: flex;
 }
 
-.chunk div.navigation ul li {
+.navigation ul li {
   margin: 0;
-  display: block;
+  display: inline-block;
   padding: 1rem 1rem 1rem 0;
   text-align: center;
   font-weight: 600;
@@ -392,20 +391,10 @@ li {
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;
-  padding: 1rem;
 }
 
 .navigation ul li a {
   padding: 0 3px 0 4px;
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    margin-bottom: 0;
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
 }
 
 /* Dividers, bubbles and icons
