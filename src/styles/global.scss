@@ -196,7 +196,6 @@ label > .label-body {
 header.grid-header {
     position: relative;
     z-index: 1000;
-    background: $background;
     text-align: center;
     line-height: 0.9;
     text-align: left;
@@ -209,14 +208,10 @@ header.grid-header {
 main, .header-container {
     flex: 1;
     padding: 2rem 4rem;
-    background: $background;
 }
 
-main {
+main, aside {
   margin-top: 0;
-}
-
-aside {
   background: $background;
 }
   
@@ -272,9 +267,6 @@ footer {
     }
     .header-container {
       padding: 4rem 0;
-    }
-    main, aside {
-        border-bottom: none;
     }
     main {
       padding: 4rem 6rem;
