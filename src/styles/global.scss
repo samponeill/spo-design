@@ -189,6 +189,10 @@ label > .label-body {
     flex-direction: column;
 }
 
+.grid {
+  min-height: 100vh;
+}
+
 header.grid-header {
     position: relative;
     z-index: 1000;
