@@ -263,12 +263,12 @@ footer {
     .grid {
       display: grid;
       grid-template-columns: 20vw 60vw 20vw;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto;
     }
     .grid-header {
       display: grid;
       grid-template-columns: 20vw 80vw;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto;
     }
     .header-container {
       padding: 4rem 0;
