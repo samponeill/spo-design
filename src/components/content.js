@@ -3,7 +3,7 @@ import Branding from '../static/services-01.svg'
 import Marketing from '../static/services-02.svg'
 import Websites from '../static/services-03.svg'
 import Carousel from './carousels'
-import Form from './form'
+import ContactForm from './form'
 
 const Content = () => (
             <main className="section">
@@ -71,7 +71,7 @@ const Content = () => (
                 <h2>Get in touch</h2>
               </div>
 
-            <Form></Form>
+            <ContactForm></ContactForm>
             </div>
           </main>
       );

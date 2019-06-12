@@ -1,6 +1,46 @@
 import React from 'react'
 
-const Form = () => (
+class ContactForm extends Component {
+    constructor(props) {
+      super(props)
+      this.ContactForm = React.createRef()
+      this.state = {}
+    }
+    encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+    }
+    handleChange = e => {
+      this.setState({ [e.target.name]: e.target.value })
+    }
+  
+    handleSubmit = e => {
+      e.preventDefault()
+      const form = this.ContactForm.current
+  
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": form.getAttribute("name"),
+          ...this.state,
+        }),
+      })
+        .then(response => {
+          console.log("====================================")
+          console.log(`${JSON.stringify(response, null, 2)}`)
+          console.log("====================================")
+          navigate(form.getAttribute("action"))
+        })
+        .catch(error => {
+          console.log("====================================")
+          console.log(`error in submiting the form data:${error}`)
+          console.log("====================================")
+        })
+    }
+    render() {
+      return (
             <form
             id="#message_form" 
             style={{marginBottom: '10rem'}}
@@ -33,6 +73,7 @@ const Form = () => (
               </div>
               <input type="hidden" name="contact" value="contact" />
             </form>
-    );
-
-  export default Form
+    )
+    }
+}
+export default ContactForm
