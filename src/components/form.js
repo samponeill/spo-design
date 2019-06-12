@@ -58,29 +58,28 @@ class ContactForm extends Component {
             <input name="bot-field" onChange={this.handleChange} />
           </label>
         </p>
-        <div className="form-grid">
+        <div className="grid-form">
             <p>
                 <label for="name">
                     Name*
                 </label>
-                <input type="text" name="name" onChange={this.handleChange} />
+                <input arial-label="Name" type="text" name="name" onChange={this.handleChange} />
             </p>
             <p>
                 <label for="email">
                     Email*
                 </label>
-                <input type="email" name="email" onChange={this.handleChange} />
+                <input arial-label="Email" type="email" name="email" onChange={this.handleChange} />
             </p>
         </div>            
         <p>
             <label for="message">
                 Message:
             </label>
-            <textarea name="message" onChange={this.handleChange} />
+            <textarea arial-label="Message box" name="message" onChange={this.handleChange} />
         </p>
         <p>
           <button type="submit">Send</button>
-          <input type="reset" value="Eraser" />
         </p>
       </form>
     )

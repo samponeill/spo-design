@@ -130,7 +130,8 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 6rem;
+  width: 100%;
+  min-height: 6rem;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: $borderstyle $border;
@@ -245,6 +246,7 @@ footer {
     }
     .grid-form {
         display: grid;
+        grid-column-gap: 2rem;
         grid-template-columns: 1fr 1fr;
         .form-container:first-child {
             padding: 0 1rem 0 0;
