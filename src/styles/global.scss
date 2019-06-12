@@ -180,41 +180,48 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-/* Grid
+/* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .grid {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    grid-column-gap: 1rem;
 }  
-  
-@media (min-width: 768px) {
-    .grid {
-      display: grid;
-      grid-template-columns: 20vw 60vw 20vw;
-      grid-template-rows: auto 1fr auto;
-  
-    }
-}
   
 header {
     grid-column: span 3;
     text-align: center;
+    padding: 6rem 2rem;
+    .chunk:first-child {
+        padding: 4rem;
+    }
 }
   
 main {
     flex: 1;
-    padding: 2rem;
+    padding: 4rem 6rem;
+    background: $background;
+    border: $borderstyle $border;
 }
   
 nav {
-    padding: 2rem;
-    visibility: hidden;
+    padding: 4rem 2rem;
+    text-align: center;
 }
    
-aside {
+nav .container, aside .container {
+    background: $background;
     padding: 2rem;
+    border: $borderstyle $border;
+    p:last-child {
+        margin-bottom: 2rem;
+    }
+    .blog.bubble {
+        padding: 0 4rem 2rem;
+        margin: 2rem 0;
+    }
 }
   
 footer {
@@ -224,32 +231,37 @@ footer {
 }
 
 .grid-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    .form-container:first-child {
-        padding: 0 1rem 0 0;
-    } 
-    .form-container:last-child {
-        padding: 0 0 0 1rem;
-    } 
+    display: block;
+}
+  
+@media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: calc(20vw - 1rem) calc(60vw - 1rem) calc(20vw - 1rem);
+      grid-template-rows: auto 1fr auto;
+    }
+    main, aside {
+        border-bottom: none;
+    }
+    .grid-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .form-container:first-child {
+            padding: 0 1rem 0 0;
+        } 
+        .form-container:last-child {
+            padding: 0 0 0 1rem;
+        } 
+    }
+    nav {
+        text-align: left;
+    }
+    nav ul li {
+        width: 100%;
+    }
 }
 
-/* For devices larger than 400px */
-@media (min-width: 400px) {
-    .column {
-    }    
-}
 
-/* For devices larger than 550px */
-@media (min-width: 550px) {
-    .column {
-
-    }    
-}
-
-/* For devices larger than 680px */
-@media (min-width: 680px) {
-}
 
 
 /* Base Styles
@@ -339,7 +351,7 @@ li {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .divider {
   display: block;
-  height: 3px;
+  height: $borderweight;
   background-color: $border;
   margin: 8rem auto;
 }
@@ -351,6 +363,9 @@ li {
   margin-bottom: 3rem;
   box-sizing: border-box;
   text-align: center;
+  border: $borderstyle $border;
+  border: none;
+  border-top: $borderstyle $secondary;
 }
 
 .carousel {
@@ -362,10 +377,7 @@ li {
 }
 
 
-.bubble.blog {
-    -webkit-box-shadow: 0px 6px 8px -2px rgba(186,186,186,1);
-    -moz-box-shadow: 0px 6px 8px -2px rgba(186,186,186,1);
-    box-shadow: 0px 6px 8px -2px rgba(186,186,186,1);    
+.column.blog, .bubble.blog { 
     text-align: left;
     transition: all 0.3s;
     .title {
@@ -378,6 +390,9 @@ li {
     .subtitle {
         color: $primary;
         font-size: $size3;
+    }
+    .headline {
+        margin-top: 2rem;
     }
     .standfirst {
         color: $primary;

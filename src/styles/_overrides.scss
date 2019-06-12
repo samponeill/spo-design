@@ -36,7 +36,9 @@ $bubbleanim: translateY(0);
 
 //Borders
 
-$borderstyle: 2px solid;
+$borderweight: 4px;
+$bordertype: solid;
+$borderstyle: $borderweight $bordertype;
 $rad: 0;
 
 //Box shadow

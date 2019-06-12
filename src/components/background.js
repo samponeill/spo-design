@@ -11,7 +11,7 @@ const bgStyle = {
     opacity: '0.5'
 };
 
-const Background = ({ children }) => (
+const Background = () => (
   <StaticQuery
     query={graphql`
       query BackgroundQuery {

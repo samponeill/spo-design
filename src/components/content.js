@@ -77,10 +77,6 @@ const Content = () => (
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"> 
-                <div style={{visibility: "hidden"}} className="hidden chunk">
-                  <label htmlFor="bot-field">I am a robot</label>
-                  <input type="text" name="bot-field" style={{width: '100%'}} />
-                </div>
                 <div className="grid-form">
                   <div className="chunk form-container">
                     <label htmlFor="Name">Name*</label>
@@ -98,6 +94,10 @@ const Content = () => (
                 </div>
               <input className="shadow" arial-label="submit" id="contact-submit" defaultValue="submit" name="submit" type="submit" />
               <label htmlFor="submit" />
+              <div style={{visibility: "hidden"}} className="hidden chunk">
+                  <label htmlFor="bot-field">I am a robot</label>
+                  <input type="text" name="bot-field" style={{width: '100%'}} />
+              </div>
             </form>
             </div>
             <div className="container"></div>

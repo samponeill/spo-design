@@ -18,7 +18,7 @@ const ArticleTemplate = ({ data }) => (
   <Layout>
     <main>
       <div className="container">
-        <article style={{marginTop: "3rem"}} className="bubble column blog">
+        <article style={{marginTop: "3rem"}} className="column blog">
             <div className="">
               <Img className="" fluid={data.strapiArticle.image.childImageSharp.fluid} />
               <h1 className="headline">{data.strapiArticle.title}</h1>

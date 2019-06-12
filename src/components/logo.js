@@ -21,7 +21,7 @@ const Logo = ({ children }) => (
     `}
     render={data => (
       <>
-      <Img alt={data.strapiLogo.alt} alt="SPO Design Co logo" style={{margin: '6rem auto 3rem'}} fixed={data.strapiLogo.logo.childImageSharp.fixed} />
+      <Img alt={data.strapiLogo.alt} fixed={data.strapiLogo.logo.childImageSharp.fixed} />
       </>
     )}
   />

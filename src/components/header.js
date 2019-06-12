@@ -5,7 +5,6 @@ import Logo from "./logo"
 
 const Header = () => (
 <header>
-<div className="container">
 <div className="chunk">
   <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
 </div>
@@ -21,7 +20,6 @@ const Header = () => (
       </ul>
     </div>        
   </div>
-</div>
 </header>
 )
 
