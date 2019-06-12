@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from "react"
+import { navigate } from "gatsby"
 
 class ContactForm extends Component {
     constructor(props) {
@@ -57,26 +58,25 @@ class ContactForm extends Component {
             <input name="bot-field" onChange={this.handleChange} />
           </label>
         </p>
+        <div className="form-grid">
+            <p>
+                <label for="name">
+                    Name*
+                </label>
+                <input type="text" name="name" onChange={this.handleChange} />
+            </p>
+            <p>
+                <label for="email">
+                    Email*
+                </label>
+                <input type="email" name="email" onChange={this.handleChange} />
+            </p>
+        </div>            
         <p>
-          <label>
-            Name:
-            <br />
-            <input type="text" name="name" onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email:
-            <br />
-            <input type="email" name="email" onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
+            <label for="message">
+                Message:
+            </label>
             <textarea name="message" onChange={this.handleChange} />
-          </label>
         </p>
         <p>
           <button type="submit">Send</button>
