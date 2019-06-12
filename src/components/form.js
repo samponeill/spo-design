@@ -16,7 +16,7 @@ const Form = () => (
                   </div>     
                   <div className="chunk form-container">
                     <label htmlFor="email">Email*</label>         
-                    <input arial-label="email" id="email" required type="text" name="email" style={{width: '100%'}} />
+                    <input arial-label="email" id="email" required type="email" name="email" style={{width: '100%'}} />
                     <input arial-label="Ignore" id="number" type="text" name="number" style={{display: 'none'}} />        
                   </div>
                 </div>
