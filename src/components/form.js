@@ -59,14 +59,14 @@ class ContactForm extends Component {
         </p>
         <p>
           <label>
-            Your name:
+            Name:
             <br />
             <input type="text" name="name" onChange={this.handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Your email:
+            Email:
             <br />
             <input type="email" name="email" onChange={this.handleChange} />
           </label>
