@@ -4,6 +4,7 @@ import Content from '../components/content'
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="SPO Design Co: Straightforward design for small businesses" />
     <Content></Content>
   </Layout>
 )
