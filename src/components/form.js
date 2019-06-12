@@ -28,8 +28,9 @@ const Form = () => (
               <label htmlFor="submit" />
               <div style={{visibility: "hidden"}} className="hidden chunk">
                   <label htmlFor="bot-field">I am a robot</label>
-                  <input type="text" name="bot-field" style={{width: '100%'}} />
+                  <input type="hidden" name="bot-field" style={{width: '100%'}} />
               </div>
+              <input type="hidden" name="contact" value="contact" />
             </form>
     );
 
