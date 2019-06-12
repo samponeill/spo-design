@@ -7,6 +7,7 @@ const Form = () => (
             name="contact"
             method="POST"
             action="/success"
+            netlify
             data-netlify="true"
             netlify-honeypot="bot-field"> 
                 <div className="grid-form">
