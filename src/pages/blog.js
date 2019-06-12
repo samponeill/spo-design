@@ -16,13 +16,14 @@ function slugify(text)
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <SEO title="Buy it for life: the best things are designed to last a lifetime" />
     <main>
         <div className="container">
           <div className="chunk" style={{marginTop: '1rem'}}>
-            <h1>Buy it for life blog</h1>
+            <h1>Buy it for life</h1>
           </div>
           <div className="chunk">
-            <p>We love great design in every form it takes. This blog is dedicated to showcasing what we believe to be the world's best designs.</p>
+            <p>We believe durability and utility are intrinsic to great design. Here we have put together a showcase of out favourite designs.</p>
           </div>
           {data.allStrapiArticle.edges.map(document => (
           <div>
