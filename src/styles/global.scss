@@ -14,7 +14,7 @@ body {
  
 /* Headings
 –––––––––––––––––––––––––––––––––––––––––––––––––– */  
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, header {
     font-family: $font-secondary;
     font-weight: 700;
     font-style: normal;
@@ -151,7 +151,7 @@ textarea {
      -moz-appearance: none;
           appearance: none; }
 textarea {
-  min-height: 65px;
+  min-height: 15rem;
   padding-top: 6px;
   padding-bottom: 6px; }
 input[type="email"]:focus,
@@ -184,32 +184,42 @@ label > .label-body {
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.grid {
+.grid, .grid-header {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    grid-column-gap: 1rem;
-}  
-  
-header {
-    grid-column: span 3;
+}
+
+header.grid-header {
+    position: relative;
+    z-index: 1000;
+    background: $background;
     text-align: center;
-    padding: 6rem 2rem;
-    .chunk:first-child {
-        padding: 4rem;
+    line-height: 0.9;
+    text-align: left;
+    border-bottom: $borderstyle $border;
+    .logo {
+      padding: 0;
     }
 }
   
-main {
+main, .header-container {
     flex: 1;
-    padding: 4rem 6rem;
+    padding: 2rem 4rem;
     background: $background;
-    border: $borderstyle $border;
+}
+
+main {
+  margin-top: 0;
+}
+
+aside {
+  background: $background;
 }
   
 nav {
-    padding: 4rem 2rem;
+    padding: 0;
     text-align: center;
+    background: none;
 }
    
 nav .container, aside .container {
@@ -234,15 +244,41 @@ footer {
 .grid-form {
     display: block;
 }
+
+.logo-small {
+  display: block;
+  max-width: 380px;
+  padding-bottom: 2rem;
+}
+
+.logo-large {
+  display: none;
+}
   
 @media (min-width: 768px) {
     .grid {
       display: grid;
-      grid-template-columns: calc(20vw - 1rem) calc(60vw - 1rem) calc(20vw - 1rem);
+      grid-template-columns: 20vw 60vw 20vw;
       grid-template-rows: auto 1fr auto;
+    }
+    .grid-header {
+      display: grid;
+      grid-template-columns: 20vw 80vw;
+      grid-template-rows: auto 1fr;
+    }
+    .header-container {
+      padding: 4rem 0;
     }
     main, aside {
         border-bottom: none;
+    }
+    main {
+      padding: 4rem 6rem;
+      border-left: $borderstyle $border;
+    }
+    header .nav.header-container {
+      border-left: $borderstyle $border;
+      padding: 2rem 6rem 2rem 0;
     }
     .grid-form {
         display: grid;
@@ -260,9 +296,21 @@ footer {
     }
     nav ul li {
         width: 100%;
-    }
+    }  
 }
 
+@media (min-width: 1440px) {
+  .logo-small {
+    display: none;
+  }
+  
+  .logo-large {
+    display: block;
+  }
+  div.header-container.logo {
+    padding: 2rem;
+  }
+}
 
 
 
@@ -329,11 +377,12 @@ li {
 
 .navbar {
   margin-bottom: 0;
+  display: flex;
 }
 
-.navigation ul li {
+.chunk div.navigation ul li {
   margin: 0;
-  display: inline-block;
+  display: block;
   padding: 1rem 1rem 1rem 0;
   text-align: center;
   font-weight: 600;
@@ -343,10 +392,20 @@ li {
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;
+  padding: 1rem;
 }
 
 .navigation ul li a {
   padding: 0 3px 0 4px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    margin-bottom: 0;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* Dividers, bubbles and icons

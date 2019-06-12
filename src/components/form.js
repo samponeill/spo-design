@@ -74,12 +74,12 @@ class ContactForm extends Component {
         </div>            
         <p>
             <label for="message">
-                Message:
+                Message*
             </label>
             <textarea arial-label="Message box" name="message" onChange={this.handleChange} />
         </p>
         <p>
-          <button type="submit">Send</button>
+          <button className="shadow" type="submit">Send</button>
         </p>
       </form>
     )

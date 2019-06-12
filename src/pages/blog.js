@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import SEO from "../components/seo"
 
 function slugify(text)
 {
@@ -16,6 +17,7 @@ function slugify(text)
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <SEO title="Buy it for life: the best things are designed to last a lifetime" />
     <main>
         <div className="container">
           <div className="chunk" style={{marginTop: '1rem'}}>

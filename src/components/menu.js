@@ -4,16 +4,10 @@ import React from "react"
 import Logo from "./logo"
 
 const Header = () => (
-<header className="grid-header">
-<div className="logo header-container">
-  <div className="chunk logo-large">
-    <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
-  </div>
+<header className="shadow">
+<div className="chunk">
+  <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
 </div>
-<div className="nav header-container">
-  <div className="chunk logo-small">
-    <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
-  </div>  
   <div className="chunk">
     <div className="navigation">
       <ul className="navbar">
@@ -26,7 +20,6 @@ const Header = () => (
       </ul>
     </div>        
   </div>
-</div>
 </header>
 )
 

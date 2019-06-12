@@ -35,8 +35,8 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Background></Background>
+        <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.tagline} />
         <div className="grid">
-          <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.tagline} />
           <Nav></Nav>
           {children}
           <Aside></Aside>
