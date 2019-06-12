@@ -6,6 +6,7 @@ const Form = () => (
             style={{marginBottom: '10rem'}}
             name="contact"
             method="POST"
+            action="/success"
             data-netlify="true"
             netlify-honeypot="bot-field"> 
                 <div className="grid-form">
