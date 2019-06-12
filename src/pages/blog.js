@@ -16,7 +16,6 @@ function slugify(text)
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Buy it for life: the best things are designed to last a lifetime" />
     <main>
         <div className="container">
           <div className="chunk" style={{marginTop: '1rem'}}>
