@@ -42,6 +42,12 @@ module.exports = {
       },
     },
     {
+      resolve: '@debiki/gatsby-plugin-talkyard',
+      options: {
+        talkyardServerUrl: 'https://comments-for-spo-design.talkyard.net'
+      }
+    },    
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-138288323-1",

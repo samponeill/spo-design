@@ -4,6 +4,8 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout' 
 import ReactMarkdown from '../../node_modules/react-markdown'
 import SEO from '../components/seo'
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
+
 
 function slugify(text)
 {
@@ -41,6 +43,7 @@ const ArticleTemplate = ({ data }) => (
           </div>
         </article>
       </div>
+      <TalkyardCommentsIframe />
       </main>
   </Layout>
 )
