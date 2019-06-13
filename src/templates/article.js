@@ -41,6 +41,7 @@ const ArticleTemplate = ({ data }) => (
           <div className="">
             <ReactMarkdown source={data.strapiArticle.content} />
           </div>
+          <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
         </article>
       </div>
       <TalkyardCommentsIframe />
