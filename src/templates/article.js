@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout' 
 import ReactMarkdown from '../../node_modules/react-markdown'
+import SEO from '../components/seo'
 
 function slugify(text)
 {
@@ -16,6 +17,7 @@ function slugify(text)
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.strapiArticle.title} />
     <main>
       <div className="container">
         <article style={{marginTop: "3rem"}} className="column blog">
