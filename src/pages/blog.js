@@ -24,7 +24,9 @@ const IndexPage = ({ data }) => (
             <h1>Buy it for life blog</h1>
           </div>
           <div className="chunk">
-            <p>We love great design at SPO Design Co. The BIFL blog is our platform for showcasing our favourite everyday product designs that go beyond the ordinary in terms of durability, utility, and accessibility.</p>
+            <p>Hi there 👋</p>
+            <p>Welcome to the BIFL blog where we will be showcasing our favourite designs with a focus on real-world products that are designed to last. 
+            <p>We believe durability, sustainability, and utility are intrinsic to great design and will be scouring the planet for anything and everything that is practical, long-lasting, and doesn't cost the earth.</p>
           </div>
           {data.allStrapiArticle.edges.map(document => (
           <div>
