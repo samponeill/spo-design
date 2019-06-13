@@ -32,7 +32,7 @@ const ArticleTemplate = ({ data }) => (
               </p>
               <p>Tags:</p>
               <ul className="">{data.strapiArticle.tags.map(number => (
-                <li className="tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
+                <li className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
