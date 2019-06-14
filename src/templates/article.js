@@ -22,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
     <SEO title={data.strapiArticle.title} />
     <main>
       <div className="container">
-        <article style={{marginTop: "3rem"}} className="column blog">
+        <article className="column blog">
             <div className="">
               <Img className="" fluid={data.strapiArticle.image.childImageSharp.fluid} />
               <h1 className="headline">{data.strapiArticle.title}</h1>
