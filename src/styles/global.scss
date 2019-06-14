@@ -199,7 +199,6 @@ header.grid-header {
     z-index: 1000;
     text-align: center;
     line-height: 0.9;
-    text-align: left;
     .logo {
       padding: 0;
       background: none;
@@ -207,9 +206,14 @@ header.grid-header {
     }
 }
   
-main, .header-container {
+main {
     flex: 1;
     padding: 2rem 4rem;
+}
+
+.header-container {
+  flex: 1;
+  padding: 0;
 }
 
 main, aside {
@@ -249,7 +253,6 @@ footer {
 
 .logo-small {
   display: block;
-  max-width: 380px;
   padding-bottom: 2rem;
 }
 
@@ -263,10 +266,11 @@ footer {
       grid-template-columns: 20vw 60vw 20vw;
       grid-template-rows: auto;
     }
-    .grid-header {
+    header.grid-header {
       display: grid;
       grid-template-columns: 20vw 80vw;
       grid-template-rows: auto;
+      text-align: left;
     }
     .header-container {
       padding: 4rem 0;
@@ -379,6 +383,16 @@ li {
 
 .navbar {
   margin-bottom: 0;
+}
+
+header .navigation {
+  padding: 1rem 4rem 2rem;
+}
+
+@media (min-width: 768px) {
+  header .navigation {
+    padding: 0;
+  }
 }
 
 .navigation ul li {
