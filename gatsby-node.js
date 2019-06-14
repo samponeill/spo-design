@@ -52,10 +52,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getArticles = makeRequest(graphql, `
   {
-    allStrapiArticle(
-      sort: {fields: created_at, order: DESC},
-      filter: { draft {eq: "false" } }
-    ) {
+    allStrapiArticle(filter: {draft: {eq: false}}, sort: {fields: created_at, order: DESC}) {
       edges {
         node {
           id
