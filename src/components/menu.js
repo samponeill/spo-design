@@ -1,38 +1,21 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Logo from "./logo"
+import ReactDOM from 'react-dom'
+import React from 'react'
+import { useSpring, animated } from 'react-spring'
+import range from 'lodash-es/range'
 
-const Header = () => (
-<header className="shadow">
-<div className="chunk">
-  <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
-</div>
-  <div className="chunk">
-    <div className="navigation">
-      <ul className="navbar">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#clients">Case studies</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#quotes">Testimonials</a></li>
-        <li><a href="/#contact">Contact</a></li>             
-        <li><a href="/blog">Design blog</a></li>             
-      </ul>
-    </div>        
-  </div>
-</header>
-)
+const items = range(4)
+const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-  menuLinks: PropTypes.string,
-  tagline: PropTypes.string,
+export default function App() {
+  const { radians } = useSpring({
+    to: async next => {
+      while (1) await next({ radians: 2 * Math.PI })
+    },
+    from: { radians: 0 },
+    config: { duration: 3500 },
+    reset: true,
+  })
+  return items.map(i => <animated.div key={i} className="script-bf-box" style={{ transform: radians.interpolate(interp(i)) }} />)
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-  menuLinks: ``,  
-  tagline: ``,  
-}
-
-export default Header
+ReactDOM.render(<App />, document.getElementById('root'))

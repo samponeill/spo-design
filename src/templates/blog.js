@@ -15,7 +15,7 @@ function slugify(text)
 };
 
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data, pageContext }) => (
   <Layout>
     <SEO title="Buy it for life: designs to last a lifetime" />
     <main>
@@ -45,9 +45,15 @@ const IndexPage = ({ data }) => (
                   </div>
                 </div>
             </Link>
-          </div>        
+          </div>
           ))}
       </div>
+      <div className="pagination">
+        <div>
+          <Link to={pageContext.previousPagePath}>&#60; Previous</Link>
+          <Link to={pageContext.nextPagePath}>Next&#62;</Link>
+        </div>
+      </div>        
     </main>
   </Layout>
 )
@@ -55,8 +61,12 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const pageQuery = graphql`  
-  query IndexQuery {
-    allStrapiArticle {
+  query IndexQuery($skip: Int!, $limit: Int!) {
+    allStrapiArticle(
+      sort: {fields: created_at, order: DESC}
+      skip: $skip 
+      limit: $limit
+    ) {    
       edges {
         node {
           id
@@ -70,6 +80,7 @@ export const pageQuery = graphql`
           title
           standfirst
           content
+          draft
         }
       }
     }

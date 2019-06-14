@@ -19,6 +19,7 @@ const Nav = () => (
               id
               title
               standfirst
+              draft
           }
       }
     `}

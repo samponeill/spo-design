@@ -78,12 +78,17 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })    
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: posts, // An array of objects
-      itemsPerPage: postsPerPage, // How many items you want per page
-      pathPrefix: '/blog', // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve('src/templates/blog.js'), // Just like `createPage()`
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blog.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
     })
   });
 

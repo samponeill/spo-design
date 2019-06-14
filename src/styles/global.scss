@@ -443,6 +443,22 @@ header .navigation {
     transform: none;
 }
 
+.pagination {
+  width: 100%;
+  display: flex;
+  div {
+    display: block;
+    margin: 0 auto;
+    :first-child {
+      text-align: center;
+      margin-right: 2rem;
+    }
+    :last-child {
+      text-align: center;
+    }    
+  }
+}
+
 
 .column.blog, .bubble.blog { 
     text-align: left;
