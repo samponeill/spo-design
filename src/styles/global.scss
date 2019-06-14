@@ -33,7 +33,7 @@ a {
     font-weight: 700;    
     text-decoration: none;
     color: rgba(0,0,231,1);
-    border-bottom: 5px solid rgba(0,0,231,.5);
+    border-bottom: $borderstyle rgba(0,0,231,.5);
     transition: 200ms all ease-in-out;
   }
   
