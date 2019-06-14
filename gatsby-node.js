@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
   {
     allStrapiArticle(
       sort: {fields: created_at, order: DESC}
-      draft: { eq: "false" }
+      filter: { draft {eq: "false"} }
     ) {
       edges {
         node {
