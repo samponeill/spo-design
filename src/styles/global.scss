@@ -470,6 +470,8 @@ header .navigation {
 }
 
 nav .bubble.blog {
+  position: sticky;
+  top: 2rem;
   h4 {
     line-height: 2;
     font-size: $size3;
