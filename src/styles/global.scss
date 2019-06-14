@@ -202,7 +202,7 @@ header.grid-header {
     text-align: left;
     .logo {
       padding: 0;
-      background: #333;
+      background: none;
       z-index: 100;
     }
 }
@@ -306,6 +306,11 @@ footer {
   }
   div.header-container.logo {
     padding: 2rem;
+  }
+  header.grid-header {
+    .logo {
+      background: $border;
+    }
   }
 }
 
