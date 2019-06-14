@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 
 function slugify(text)
 {
@@ -38,12 +37,6 @@ const Aside = () => (
     render={data => (
     <aside>
         <div className="container">
-          <div className="chunk" style={{marginTop: '1rem'}}>
-            <h1>Buy it for life blog</h1>
-          </div>
-          <div className="chunk">
-            <p>Latest from the blog</p>
-          </div>
           {data.allStrapiArticle.edges.map(document => (
           <div>
             <Link to={`articles/` + slugify(document.node.title)}>
@@ -51,7 +44,7 @@ const Aside = () => (
                 <div className="">
                   <div className="">
                     <article key={document.node.id} className="">
-                      <h3 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h3>      
+                      <h5 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h5>      
                     </article>
                     </div>
                   </div>
