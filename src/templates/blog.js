@@ -50,8 +50,8 @@ const IndexPage = ({ data, pageContext }) => (
       </div>
       <div className="pagination">
         <div>
-          <Link to={pageContext.previousPagePath}>&#60; Previous</Link>
-          <Link to={pageContext.nextPagePath}>Next&#62;</Link>
+          {pageContext.previousPagePath ? <Link to={pageContext.previousPagePath}>&#60; Previous</Link> : null}
+          {pageContext.nextPagePath ? <Link to={pageContext.nextPagePath}>Next&#62;</Link> : null}
         </div>
       </div>        
     </main>
