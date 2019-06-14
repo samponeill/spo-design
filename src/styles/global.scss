@@ -296,26 +296,26 @@ footer {
     nav ul li {
         width: 100%;
     }  
-    nav .container, aside .container {
+    .logo-small {
+      display: none;
+    }
+    
+    .logo-large {
       display: block;
+    }
+    div.header-container.logo {
+      padding: 2rem;
+    }
+    header.grid-header {
+      .logo {
+        background: $border;
+      }
     }
 }
 
-@media (min-width: 768px) {
-  .logo-small {
-    display: none;
-  }
-  
-  .logo-large {
+@media (min-width: 1200px) {
+  nav .container, aside .container {
     display: block;
-  }
-  div.header-container.logo {
-    padding: 2rem;
-  }
-  header.grid-header {
-    .logo {
-      background: $border;
-    }
   }
 }
 
