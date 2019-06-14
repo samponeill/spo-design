@@ -10,7 +10,7 @@ const Header = () => (
     <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
   </div>
 </div>
-<div className="nav header-container">
+<div className="nav shadow header-container">
   <div className="chunk logo-small">
     <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
   </div>  

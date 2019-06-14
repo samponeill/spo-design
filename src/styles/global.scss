@@ -200,9 +200,10 @@ header.grid-header {
     text-align: center;
     line-height: 0.9;
     text-align: left;
-    border-bottom: $borderstyle $border;
     .logo {
       padding: 0;
+      background: #333;
+      z-index: 100;
     }
 }
   
@@ -272,10 +273,8 @@ footer {
     }
     main {
       padding: 4rem 6rem;
-      border-left: $borderstyle $border;
     }
     header .nav.header-container {
-      border-left: $borderstyle $border;
       padding: 2rem 6rem;
     }
     .grid-form {
