@@ -21,6 +21,14 @@ const paginationPath = (path, page, totalPages) => {
   }
 }
 
+const digest = data => {
+  return crypto
+    .createHash(`md5`)
+    .update(JSON.stringify(data))
+    .digest(`hex`);
+};
+
+
 function slugify(text)
 {
   return text.toString().toLowerCase()
@@ -71,7 +79,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: `/articles/${articleSlug}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
-          id: node.id,
+          id: node.id + "-markdown",
           title: node.title,
         },
       })
@@ -172,13 +180,31 @@ exports.createPages = ({ actions, graphql }) => {
   ]) 
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = async ({ node, actions }) => {
+  const { createNode } = actions;
   if (node.internal.type === `allStrapiArticle`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       node,
       value,
     })
+  }  
+  if (node.internal.type === 'StrapiArticle') {
+    createNode({
+      ...node,
+      slug: node.path,
+      id: node.id + "-markdown",
+      parent: node.id,
+      children: [],
+      internal: {
+        type: 'Article',
+        mediaType: 'text/markdown',
+        content: node.content,
+        contentDigest: crypto
+          .createHash(`md5`)
+          .update(JSON.stringify(node))
+          .digest(`hex`)
+      }
+    });
   }
-}
+};

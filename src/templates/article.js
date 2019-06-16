@@ -2,10 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout' 
-import ReactMarkdown from '../../node_modules/react-markdown'
 import SEO from '../components/seo'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
-
 
 function slugify(text)
 {
@@ -19,27 +17,27 @@ function slugify(text)
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiArticle.title} />
+    <SEO title={data.article.title} />
     <main>
       <div className="container">
         <article className="column blog">
             <div className="">
-              <Img className="" fluid={data.strapiArticle.image.childImageSharp.fluid} />
-              <h1 className="headline">{data.strapiArticle.title}</h1>
+              <Img className="" fluid={data.article.image.childImageSharp.fluid} />
+              <h1 className="headline">{data.article.title}</h1>
               <h2 className="standfirst">
-                {data.strapiArticle.standfirst}
+                {data.article.standfirst}
               </h2>
               <p className="">
-                By <Link to={`/contributors/${slugify(data.strapiArticle.author.username)}`}>{data.strapiArticle.author.username}</Link>
+                By <Link to={`/contributors/${slugify(data.article.author.username)}`}>{data.article.author.username}</Link>
               </p>
               <p>Tags:</p>
-              <ul className="">{data.strapiArticle.tags.map(number => (
+              <ul className="">{data.article.tags.map(number => (
                 <li className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
           <div className="">
-            <ReactMarkdown source={data.strapiArticle.content} />
+            <div dangerouslySetInnerHTML={{ __html: data.article.childMarkdownRemark.html }} />
           </div>
           <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
         </article>
@@ -53,11 +51,11 @@ export default ArticleTemplate
 
 export const query = graphql`
   query ArticleTemplate($id: String!) {
-    strapiArticle(
-      draft: { eq: false }
-      id: { eq: $id }) {
+    article(id: { eq: $id }) {
       title
-      content
+      childMarkdownRemark {
+        html
+      }
       standfirst
       tags {
           id
