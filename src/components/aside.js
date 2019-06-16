@@ -14,7 +14,7 @@ function slugify(text)
 const Aside = () => (
     <aside>
       <AdSense.Google
-        client='ca-pub-7292810486004926'
+        client='ca-pub-7392930484465085'
         slot='7806394673'
       />
     </aside>
