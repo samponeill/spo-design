@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import AdSense from 'react-adsense';
 
 function slugify(text)
 {
@@ -14,6 +13,10 @@ function slugify(text)
 
 const Aside = () => (
     <aside>
+      <AdSense.Google
+        client='ca-pub-7292810486004926'
+        slot='7806394673'
+      />
     </aside>
 )
 

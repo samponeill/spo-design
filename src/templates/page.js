@@ -14,7 +14,7 @@ const PageTemplate = ({ data }) => (
         <ReactMarkdown source={data.strapiPage.content} />
       </div>
     </article>
-    </div>    
+    </div>
   </Layout>
 )
 

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
 
+
 function slugify(text)
 {
   return text.toString().toLowerCase()
@@ -14,6 +15,11 @@ function slugify(text)
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '');            // Trim - from end of text
 };
+
+const pixelStyle = {
+  border: "none",
+  margin: "0"
+}
 
 const ArticleTemplate = ({ data, pageContext }) => (
   <Layout>
@@ -46,9 +52,13 @@ const ArticleTemplate = ({ data, pageContext }) => (
         <div>
           {pageContext.nextPagePath ? <Link to={pageContext.nextPagePath}>Next article&#62;</Link> : null}
         </div>
-      </div>              
+      </div>
+      <img src={`//ir-uk.amazon-adsystem.com/e/ir?t=spodesignblog-21&l=ur2&o=2`}
+        width="1" height="1" border="0" alt=""
+        style={pixelStyle} />
       <TalkyardCommentsIframe />
       </main>
+      <script async src={"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}></script>
   </Layout>
 )
 
