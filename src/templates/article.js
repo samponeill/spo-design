@@ -15,7 +15,7 @@ function slugify(text)
     .replace(/-+$/, '');            // Trim - from end of text
 };
 
-const ArticleTemplate = ({ data }) => (
+const ArticleTemplate = ({ data, pageContext }) => (
   <Layout>
     <SEO title={data.article.title} />
     <main>
@@ -42,6 +42,11 @@ const ArticleTemplate = ({ data }) => (
           <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
         </article>
       </div>
+      <div className="pagination">
+        <div>
+          {pageContext.nextPagePath ? <Link to={pageContext.nextPagePath}>Next article&#62;</Link> : null}
+        </div>
+      </div>              
       <TalkyardCommentsIframe />
       </main>
   </Layout>

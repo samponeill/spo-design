@@ -13,7 +13,7 @@ function slugify(text)
     .replace(/-+$/, '');            // Trim - from end of text
 };
 
-const TagTemplate = ({ data }) => (
+const TagTemplate = ({ data, pageContext }) => (
     <Layout>
         <main>
         <div className="container"></div>
@@ -44,7 +44,12 @@ const TagTemplate = ({ data }) => (
           </div>
           ))}
           </div>
-          <div className="container"></div>
+          <div className="pagination">
+            <div>
+              {pageContext.previousPagePath ? <Link to={pageContext.previousPagePath}>&#60; Previous</Link> : null}
+              {pageContext.nextPagePath ? <Link to={pageContext.nextPagePath}>Next&#62;</Link> : null}
+            </div>
+          </div>        
         </main>
     </Layout>
   )

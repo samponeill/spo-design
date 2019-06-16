@@ -15,30 +15,39 @@ const Nav = () => (
   <StaticQuery
     query={graphql`
       query navQuery {
-          strapiArticle {
-              id
-              title
-              standfirst
-              draft
+          allArticle(
+            sort: {fields: created_at, order: DESC},
+            limit: 1
+          ) {
+            edges {
+              node {
+                id
+                title
+                standfirst
+                draft
+            }
           }
+        }
       }
     `}
     render={data => (
     <nav>
         <div className="container">
           <div>
-            <Link to={`articles/` + slugify(data.strapiArticle.title)}>
+          {data.allArticle.edges.map(document => (
+            <Link to={`articles/` + slugify(document.node.title)}>
               <div className="chunk bubble blog shadow">
                 <div className="">
                   <div className="">
-                    <article key={data.strapiArticle.id} className="">
-                      <h4 className="title"><Link to={`articles/` + slugify(data.strapiArticle.title)}>{data.strapiArticle.title}</Link></h4>      
-                      <p className="title">{data.strapiArticle.standfirst}</p>      
+                    <article key={document.node.id} className="">
+                      <h4 className="title"><Link to={`articles/` + slugify(document.node.title)}>{document.node.title}</Link></h4>      
+                      <p className="title">{document.node.standfirst}</p>      
                     </article>
                     </div>
                   </div>
                 </div>
             </Link>
+          ))}
           </div>        
       </div>
     </nav>
