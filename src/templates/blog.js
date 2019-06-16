@@ -24,7 +24,7 @@ const IndexPage = ({ data, pageContext }) => (
             <h1>Buy it for life blog</h1>
           </div>
           <div className="chunk">
-            <p>Hi there 👋</p>
+            <p>Hi there <span role="image" aria-label="Waving hand">👋</span></p>
             <p>Welcome to the BIFL blog where we will be showcasing our favourite designs with a focus on real-world products that are designed to last.</p>
             <p>We believe durability, sustainability, and utility are intrinsic to great design and will be scouring the planet for anything and everything that is practical, long-lasting, and doesn't cost the earth.</p>
           </div>
