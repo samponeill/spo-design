@@ -22,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
       <div className="container">
         <article className="column blog">
             <div className="">
-              <Img className="" fluid={data.article.image.childImageSharp.fluid} />
+              <Img alt={data.article.alt} className="" fluid={data.article.image.childImageSharp.fluid} />
               <h1 className="headline">{data.article.title}</h1>
               <h2 className="standfirst">
                 {data.article.standfirst}
@@ -65,6 +65,7 @@ export const query = graphql`
         id
         username
       }      
+      alt
       image {
         childImageSharp {
           fluid(maxWidth: 960) {

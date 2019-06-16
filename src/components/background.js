@@ -28,7 +28,7 @@ const Background = () => (
     `}
     render={data => (
       <>
-      <BackgroundImage style={bgStyle} fluid={data.strapiBackground.pattern.childImageSharp.fluid} />
+      <BackgroundImage alt="" style={bgStyle} fluid={data.strapiBackground.pattern.childImageSharp.fluid} />
       </>
     )}
   />
