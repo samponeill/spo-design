@@ -54,7 +54,7 @@ export default ArticleTemplate
 export const query = graphql`
   query ArticleTemplate($id: String!) {
     strapiArticle(
-      draft: { eq: 0 }
+      draft: { eq: false }
       id: { eq: $id }) {
       title
       content
