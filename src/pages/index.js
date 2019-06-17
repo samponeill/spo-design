@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="SPO Design Co: Straightforward design for small businesses" />
+    <SEO title="Straightforward, ethical design for small businesses" />
     <Content></Content>
   </Layout>
 )
