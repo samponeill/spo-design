@@ -49,7 +49,7 @@ const ArticleTemplate = ({ data, pageContext }) => (
                 <li className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
               <p>Share this article</p>
-              <ul className="share-buttons">
+              <ul className="social">
                 <li><FacebookShareButton /></li>
                 <li><LinkedinShareButton /></li>
                 <li><TwitterShareButton /></li>
