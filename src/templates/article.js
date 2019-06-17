@@ -4,15 +4,6 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout' 
 import SEO from '../components/seo'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  PinterestShareButton,
-  EmailShareButton,
-} from 'react-share';
-
 
 function slugify(text)
 {
@@ -27,6 +18,10 @@ function slugify(text)
 const pixelStyle = {
   border: "none",
   margin: "0"
+}
+
+const pageLink = {
+  link :`https://spo.design/articles/`
 }
 
 const ArticleTemplate = ({ data, pageContext }) => (
@@ -46,16 +41,11 @@ const ArticleTemplate = ({ data, pageContext }) => (
               </p>
               <p>Tags:</p>
               <ul className="">{data.article.tags.map(number => (
-                <li className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
+                <li key={number.name} className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
               <p>Share this article</p>
               <ul className="social">
-                <li><FacebookShareButton /></li>
-                <li><LinkedinShareButton /></li>
-                <li><TwitterShareButton /></li>
-                <li><WhatsappShareButton /></li>
-                <li><PinterestShareButton /></li>
-                <li><EmailShareButton /></li>
+
               </ul>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
@@ -85,6 +75,7 @@ export const query = graphql`
   query ArticleTemplate($id: String!) {
     article(id: { eq: $id }) {
       title
+      slug
       childMarkdownRemark {
         html
       }

@@ -192,7 +192,7 @@ exports.onCreateNode = async ({ node, actions }) => {
   if (node.internal.type === 'StrapiArticle') {
     createNode({
       ...node,
-      slug: node.path,
+      slug: slugify(node.title),
       id: node.id + "-markdown",
       parent: node.id,
       children: [],
