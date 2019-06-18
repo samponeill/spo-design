@@ -695,17 +695,25 @@ table {
 
 th,
 td {
-  padding: 12px 15px;
+  padding: 0 0;
   text-align: left;
   border-bottom: 4px solid $border;
 }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-left: 0;
+  padding-right: 1px }
 th:last-child,
 td:last-child {
   padding-right: 0; }
 
+  @media (min-width: 550px) {
+    td {
+      padding: 0.75rem 0.75rem;
+      text-align: left;
+      border-bottom: 4px solid $border;
+    }
+  }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
