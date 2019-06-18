@@ -10152,6 +10152,11 @@ react-slugify@^1.2.0:
   resolved "https://registry.yarnpkg.com/react-slugify/-/react-slugify-1.2.0.tgz#bd3e6a6e67234b771616f2651a657361d4704353"
   integrity sha512-s3CwIkMdEzp+YMPZYaTvRkJ8oCbK1ZduWAB6E+Ic8j/HCqAKatlLFW3XQ8vpGZWAzkSI2m2bOu1BPR1vMMWOpA==
 
+react-social-media-bar@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-social-media-bar/-/react-social-media-bar-0.0.4.tgz#a16668445db5ab21f430d4981250d98734e7997d"
+  integrity sha512-1YXmpNJ8tue1qlMyQN7ikI98Ku1IWV6oBAdrstdA12lxj0kApKkYZLE5CyU0DYuz8RCbmfZleCmG26duZRHyPw==
+
 react-spring@^8.0.23:
   version "8.0.23"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.23.tgz#2a0ddaeb0816ea9e21898d04d3b8da7d1a3daa14"
