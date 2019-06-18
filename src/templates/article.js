@@ -4,14 +4,6 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout' 
 import SEO from '../components/seo'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  PinterestShareButton,
-  EmailShareButton,
-} from 'react-share';
 
 function slugify(text)
 {
@@ -51,17 +43,6 @@ const ArticleTemplate = ({ data, pageContext }) => (
               <ul className="">{data.article.tags.map(number => (
                 <li key={number.name} className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
-              <p>Share this article</p>
-              <div className="social">
-                <div className="social__button">
-                  <FacebookShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                  <TwitterShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                  <LinkedinShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                  <PinterestShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                  <EmailShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                  <WhatsappShareButton url={`https://spo.design/articles/${data.article.slug}`} />
-                </div>
-              </div>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
           <div className="">
