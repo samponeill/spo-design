@@ -21,7 +21,7 @@ const Logo = ({ children }) => (
     `}
     render={data => (
       <>
-      <Img alt={data.strapiLogo.alt} fluid={data.strapiLogo.logo.childImageSharp.fluid} />
+        <Img alt={data.strapiLogo.alt} fluid={data.strapiLogo.logo.childImageSharp.fluid} />
       </>
     )}
   />

@@ -8,12 +8,14 @@ import ContactForm from './form'
 const Content = () => (
             <main className="section">
             <div className="container item">
-              <div className="chunk" style={{marginTop: '1rem'}}>
-                <h1 className="hero">Straightforward design for small businesses.</h1>
-              </div>
-              <div className="chunk">
-                <p>Looking to develop a brand identity, new website or whip up some marketing materials? You've come to the right&nbsp;place.</p>
-                <a style={{border: 'none'}} href="#contact"><button className="shadow button">Get in touch</button></a>
+              <div className="site-header">
+                <div className="chunk" style={{marginTop: '1rem'}}>
+                  <h1 className="hero">Straightforward design for small businesses.</h1>
+                </div>
+                <div className="chunk">
+                  <p>Looking to develop a brand identity, new website or whip up some marketing materials? You've come to the right&nbsp;place.</p>
+                  <a style={{border: 'none'}} href="#contact"><button className="shadow button">Get in touch</button></a>
+                </div>
               </div>
             <div className="divider chunk" id="about" />
             <div className="chunk">

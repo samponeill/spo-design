@@ -313,6 +313,27 @@ footer {
     }
 }
 
+.hero-banner {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  background: $primary;
+  > div.hero-wrapper {
+    display: block;
+    max-width: 45vw;
+    margin: 0 auto;
+    padding-top: 10%;
+    color: $background;
+    z-index: 100;
+    position: relative;
+  }
+}
+
+.site-header {
+  display: block;
+}
+
 @media (min-width: 1200px) {
   nav .container, aside .container {
     display: block;
@@ -321,6 +342,13 @@ footer {
     display: grid;
     grid-template-columns: 20vw 50vw 50vw;
     grid-template-rows: auto;
+  }
+  .hero-banner {
+    display: none;
+    height: 100vh;
+  }
+  .site-header {
+    display: block;
   }
 }
 
@@ -619,11 +647,16 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  width: 100%;
+}
+
 th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid $border; }
+  border-bottom: 4px solid $border;
+}
 th:first-child,
 td:first-child {
   padding-left: 0; }
