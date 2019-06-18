@@ -45,7 +45,7 @@ const ArticleTemplate = ({ data, pageContext, pageLink }) => (
               <ul className="">{data.article.tags.map(number => (
                 <li key={number.name} className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
-              <div>
+              <div className="social-buttons">
                 <Facebook url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
                 <Twitter url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
               </div>

@@ -390,9 +390,11 @@ footer {
 /* Social media share icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-ul.social {
-  list-style: none;
-  display: inline-block;
+.social-buttons {
+  margin-bottom: 2.5rem;
+  a {
+    margin-right: 2rem;
+  }
 }
 
 /* Base Styles
