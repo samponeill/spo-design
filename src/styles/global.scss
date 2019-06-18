@@ -392,8 +392,12 @@ footer {
 
 .social-buttons {
   margin-bottom: 2.5rem;
-  a {
-    margin-right: 2rem;
+  a.react-sharing-button__link {
+    margin: 0 2rem 0 0;
+    font-family: $font-secondary;
+    background: $secondary;
+    border-radius: $rad;
+    padding: 1rem;
   }
 }
 
