@@ -30,7 +30,14 @@ module.exports = {
       options: {
         siteUrl: `https://spo.design`,
       },
-    },    
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1900,
+        showCaptions: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,6 +54,8 @@ module.exports = {
         gfm: true,
         plugins: [
           'gatsby-remark-a11y-emoji',
+          "gatsby-remark-unwrap-images",
+          "gatsby-remark-picture",          
         ],
       },
     },

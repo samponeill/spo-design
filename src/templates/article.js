@@ -45,8 +45,8 @@ const ArticleTemplate = ({ data, pageContext }) => (
               ))}</ul>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
-          <div className="">
-            <div dangerouslySetInnerHTML={{ __html: data.article.childMarkdownRemark.html }} />
+          <div>
+            <div className="content-container" dangerouslySetInnerHTML={{ __html: data.article.childMarkdownRemark.html }} />
           </div>
           <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
         </article>
