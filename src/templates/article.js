@@ -50,9 +50,9 @@ const ArticleTemplate = ({ data, pageContext, pageLink }) => (
               ))}</ul>
               <div className="social-buttons">
                 <p>Share via:</p>
-                <Facebook url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
-                <Twitter url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
-                <Email url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
+                <Facebook classname="shadow" url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
+                <Twitter classname="shadow" url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
+                <Email classname="shadow" url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
               </div>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
