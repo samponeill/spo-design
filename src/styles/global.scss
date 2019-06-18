@@ -391,10 +391,10 @@ footer {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .social-buttons {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   a.react-sharing-button__link {
     @include boxshadow();
-    margin: 0 2rem 0 0;
+    margin: 0 2rem 0.5rem 0;
     font-family: $font-secondary;
     background: $secondary;
     border-radius: $rad;
