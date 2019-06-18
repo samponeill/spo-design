@@ -46,8 +46,8 @@ const ArticleTemplate = ({ data, pageContext, pageLink }) => (
                 <li key={number.name} className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
               <div>
-                <Facebook url={pageLink + data.article.slug} shareText={data.article.title} />
-                <Twitter url={pageLink + data.article.slug} shareText={data.article.title} />
+                <Facebook url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
+                <Twitter url={`https://spo.design/articles/` + data.article.slug} shareText={data.article.title} />
               </div>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
