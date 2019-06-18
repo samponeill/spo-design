@@ -40,6 +40,7 @@
     "react-markdown": "^4.0.8",
     "react-pose": "^4.0.8",
     "react-share": "^3.0.0",
+    "react-sharingbuttons": "^1.0.0",
     "react-slick": "^0.24.0",
     "react-slugify": "^1.2.0",
     "react-social-media-bar": "^0.0.4",

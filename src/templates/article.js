@@ -4,6 +4,8 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout' 
 import SEO from '../components/seo'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
+import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
+import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 
 function slugify(text)
 {
@@ -24,7 +26,7 @@ const pageLink = {
   link :`https://spo.design/articles/`
 }
 
-const ArticleTemplate = ({ data, pageContext }) => (
+const ArticleTemplate = ({ data, pageContext, pageLink }) => (
   <Layout>
     <SEO title={data.article.title} />
     <main>
@@ -43,6 +45,10 @@ const ArticleTemplate = ({ data, pageContext }) => (
               <ul className="">{data.article.tags.map(number => (
                 <li key={number.name} className="shadow tags"><Link to={`/tags/${slugify(number.name)}`}>{number.name}</Link></li>
               ))}</ul>
+              <div>
+                <Facebook url={pageLink + data.article.slug} shareText={data.article.title} />
+                <Twitter url={pageLink + data.article.slug} shareText={data.article.title} />
+              </div>
               <div style={{margin: "0 0 4rem 0"}} className="divider"></div>
             </div>
           <div>
