@@ -394,7 +394,7 @@ footer {
   margin-bottom: 2rem;
   a.react-sharing-button__link {
     @include boxshadow();
-    margin: 0 2rem 0.5rem 0;
+    margin: 0 1rem 1rem 0;
     font-family: $font-secondary;
     background: $secondary;
     border-radius: $rad;
