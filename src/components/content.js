@@ -13,7 +13,7 @@ const Content = () => (
                   <h1 className="hero">Straightforward design for small businesses.</h1>
                 </div>
                 <div className="chunk">
-                  <p>Looking to develop a brand identity, new website or whip up some marketing materials? You've come to the right&nbsp;place.</p>
+                  <p>Looking to develop a brand identity, new website or whip up some marketing materials? We can help you stand&nbsp;out</p>
                   <a style={{border: 'none'}} href="#contact"><button className="shadow button">Get in touch</button></a>
                 </div>
               </div>

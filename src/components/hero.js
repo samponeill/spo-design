@@ -16,7 +16,7 @@ const Hero = ( ) => (
                         <h1 className="hero">Straightforward design for small businesses.</h1>
                     </div>
                     <div className="chunk">
-                        <p>Looking to develop a brand identity, new website or whip up some marketing materials? You've come to the right&nbsp;place.</p>
+                        <p>Looking to develop a brand identity, new website or whip up some marketing materials? We can help you stand&nbsp;out</p>
                     </div>           
                 </div>
             </div>
