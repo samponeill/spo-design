@@ -6,11 +6,11 @@
 	.sstr0{fill:none;stroke:#ffffff;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
 	.sstr1{fill:none;}
 	.sstr2{fill:#ffffff;}
-	.sstr3{fill:##D14200;stroke:#ffffff;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.sstr3{fill:#D14200;stroke:#ffffff;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
 	.sstr4{fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
 	.sstr5{fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.sstr6{fill:none;stroke:#ffffff;stroke-width:5;stroke-miterlimit:10;}
-	.sstr7{fill:##D14200;stroke:#ffffff;stroke-width:5;stroke-miterlimit:10;}
+	.sstr7{fill:#D14200;stroke:#ffffff;stroke-width:5;stroke-miterlimit:10;}
 	#whole {
 		display: block;
 		animation: 1s 0.6s linear fadeInX forwards;
