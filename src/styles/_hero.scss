@@ -1,0 +1,44 @@
+@import 'overrides';
+
+.hero-banner {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    background: none;
+    display: none;
+    height: calc(100vh - 96px);
+    position: relative;
+    z-index: 10000;
+    .hero-skin {
+        position: absolute;
+        top: 0;
+        background: none;
+        display: block;
+        height: 100%;
+        width: 100vw;
+        > div.hero-wrapper {
+            display: block;
+            max-width: 45vw;
+            margin: 0 auto;
+            padding-top: 10vh;
+            color: $background;
+            z-index: 100;
+            position: relative;
+          }
+    }
+}
+
+  
+  @media (min-width: 1200px) {
+    .index-content ~ header.grid-header {
+        position: fixed;
+        top: 0;
+    }
+    .hero-banner {
+      display: block;
+    }
+    .site-header {
+      display: none;
+    }
+  }

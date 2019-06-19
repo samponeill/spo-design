@@ -9,6 +9,7 @@ import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 import Email from 'react-sharingbuttons/dist/buttons/Email'
 
 import 'react-sharingbuttons/dist/main.css'
+import '../styles/_article.scss'
 
 function slugify(text)
 {

@@ -1,0 +1,37 @@
+@import 'overrides';
+@import 'logo';
+
+header.grid-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: $background;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    line-height: 0.9;
+    .header-container:first-child {
+        margin: 0.5rem;
+        padding: 1.5rem 0;
+    }
+    .header-container:last-child {
+        padding: 0 0 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+  nav {
+      text-align: left;
+  }
+  nav ul li {
+      width: 100%;
+  }  
+}
+
+@media (min-width: 1200px) {
+    header.grid-header {
+        position: sticky;
+        top: 0;
+    }
+}
+

@@ -6,21 +6,15 @@ import Logo from "./logo"
 const Header = () => (
 <header className="grid-header">
 <div className="logo header-container">
-  <div className="chunk logo-large">
+  <div className="chunk">
     <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
   </div>
 </div>
-<div className="nav shadow header-container">
-  <div className="chunk logo-small">
-    <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
-  </div>  
+<div className="nav shadow header-container"> 
   <div className="chunk">
     <div className="navigation">
       <ul className="navbar">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#clients">Case studies</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#quotes">Testimonials</a></li>
+        <li><a href="/#clients">Work</a></li>
         <li><a href="/#contact">Contact</a></li>             
         <li><a href="/blog">Design blog</a></li>             
       </ul>

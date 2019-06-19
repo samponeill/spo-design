@@ -184,41 +184,11 @@ label > .label-body {
 /* Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Layout - article
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.content-container {
-  display: inline-flexbox;
-  img {
-    display: inline-block;
-    max-width: 60%;
-    align-self: baseline;
-  ~ p {
-    width: 100%;
-  }
-  }
-}
-
-@media (min-width: 768px) {
-  .content-container {
-    display: inline-flexbox;
-    img {
-      display: inline-block;
-      max-width: calc(50% - 1rem);
-      margin: 0 1rem 0 0;
-      float: left;
-    ~ p:first-child {
-      max-width: 50%;
-      float: left;
-    }
-    }
-  }
-}
 
 /* Layout - grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.grid, .grid-header {
+.grid {
     display: flex;
     flex-direction: column;
 }
@@ -226,28 +196,10 @@ label > .label-body {
 .grid {
   min-height: 100vh;
 }
-
-header.grid-header {
-    position: relative;
-    background: $background;
-    z-index: 1000;
-    text-align: center;
-    line-height: 0.9;
-    .logo {
-      padding: 0;
-      background: none;
-      z-index: 100;
-    }
-}
   
 main {
     flex: 1;
     padding: 2rem 4rem;
-}
-
-.header-container {
-  flex: 1;
-  padding: 0;
 }
 
 main, aside {
@@ -287,10 +239,13 @@ footer {
 
 .logo-small {
   display: block;
-}
-
-.logo-large {
-  display: none;
+  a {
+    color: #333;
+    font-size: $size4;
+    p {
+      margin: 2rem 0;
+    }
+  }
 }
   
 @media (min-width: 768px) {
@@ -299,20 +254,8 @@ footer {
       grid-template-columns: 20vw 60vw 20vw;
       grid-template-rows: auto;
     }
-    header.grid-header {
-      display: grid;
-      grid-template-columns: 20vw 80vw;
-      grid-template-rows: auto;
-      text-align: left;
-    }
-    .header-container {
-      padding: 4rem 0;
-    }
     main {
       padding: 4rem 6rem;
-    }
-    header .nav.header-container {
-      padding: 2rem 6rem;
     }
     .grid-form {
         display: grid;
@@ -325,48 +268,6 @@ footer {
             padding: 0 0 0 1rem;
         } 
     }
-    nav {
-        text-align: left;
-    }
-    nav ul li {
-        width: 100%;
-    }  
-    .logo-small {
-      display: none;
-    }
-    
-    .logo-large {
-      display: block;
-    }
-    div.header-container.logo {
-      padding: 2rem;
-    }
-    header.grid-header {
-      .logo {
-        background: $border;
-      }
-    }
-}
-
-.hero-banner {
-  display: none;
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  background: $primary;
-  > div.hero-wrapper {
-    display: block;
-    max-width: 45vw;
-    margin: 0 auto;
-    padding-top: 10%;
-    color: $background;
-    z-index: 100;
-    position: relative;
-  }
-}
-
-.site-header {
-  display: block;
 }
 
 @media (min-width: 1200px) {
@@ -375,32 +276,18 @@ footer {
   }
   .grid {
     display: grid;
-    grid-template-columns: 20vw 50vw 50vw;
+    grid-template-columns: 25vw 50vw 25vw;
     grid-template-rows: auto;
   }
   .hero-banner {
-    display: none;
+    display: block;
     height: 100vh;
   }
   .site-header {
-    display: block;
+    display: none;
   }
 }
 
-/* Social media share icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.social-buttons {
-  margin-bottom: 2rem;
-  a.react-sharing-button__link {
-    @include boxshadow();
-    margin: 0 1rem 1rem 0;
-    font-family: $font-secondary;
-    background: $secondary;
-    border-radius: $rad;
-    padding: 1rem;
-  }
-}
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -492,7 +379,7 @@ header .navigation {
 }
 
 .navigation ul li a {
-  padding: 0 3px 0 4px;
+  padding: 0 4px;
 }
 
 /* Dividers, bubbles and icons

@@ -1,0 +1,48 @@
+@import 'overrides';
+
+/* Layout - article
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.content-container {
+  display: inline-flexbox;
+  img {
+    display: inline-block;
+    max-width: 60%;
+    align-self: baseline;
+  ~ p {
+    width: 100%;
+  }
+  }
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    display: inline-flexbox;
+    img {
+      display: inline-block;
+      max-width: calc(50% - 1rem);
+      margin: 0 1rem 0 0;
+      float: left;
+    ~ p:first-child {
+      max-width: 50%;
+      float: left;
+    }
+    }
+  }
+}
+
+
+/* Social media share icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.social-buttons {
+  margin-bottom: 2rem;
+  a.react-sharing-button__link {
+      @include boxshadow();
+      margin: 0 1rem 1rem 0;
+      font-family: $font-secondary;
+      background: $secondary;
+      border-radius: $rad;
+      padding: 1rem;
+  }
+}

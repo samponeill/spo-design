@@ -55,7 +55,7 @@ module.exports = {
         plugins: [
           'gatsby-remark-a11y-emoji',
           "gatsby-remark-unwrap-images",
-          "gatsby-remark-picture",          
+          "gatsby-remark-picture",
         ],
       },
     },

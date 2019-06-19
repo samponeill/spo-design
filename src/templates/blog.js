@@ -4,6 +4,8 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 
+import "../styles/_blog.scss"
+
 function slugify(text)
 {
   return text.toString().toLowerCase()
@@ -16,7 +18,7 @@ function slugify(text)
 
 
 const IndexPage = ({ data, pageContext }) => (
-  <Layout>
+  <Layout className="blog-index">
     <SEO title="Buy it for life: designs to last a lifetime" />
     <main>
         <div className="container">

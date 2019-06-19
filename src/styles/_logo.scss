@@ -1,0 +1,25 @@
+@import 'overrides';
+
+.logo {
+    padding: 0;
+    background: none;
+    z-index: 100;
+    font-family: $font-secondary;
+    color: $primary;
+    text-align: center;
+    vertical-align: middle;
+    a {
+        padding: 1rem;
+        margin: 0;
+        color: $primary;
+        font-size: $size4;
+        padding: 0 4px;
+        letter-spacing: 0.25rem;        
+    }
+    p {
+    }
+}
+@media (min-width: 1200px) {
+    .logo {
+    }
+}
