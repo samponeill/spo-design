@@ -191,6 +191,7 @@ label > .label-body {
 .grid {
     display: flex;
     flex-direction: column;
+    background: $background;
 }
 
 .grid {
@@ -204,13 +205,11 @@ main {
 
 main, aside {
   margin-top: 0;
-  background: $background;
 }
   
 nav {
     padding: 0;
     text-align: center;
-    background: none;
 }
    
 nav .container, aside .container {
