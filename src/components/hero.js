@@ -20,7 +20,7 @@ const Hero = ( ) => (
                 }>
                 <div className="hero-wrapper">                        
                     <div className="chunk" style={{marginTop: '0.5'}}>
-                        <img alt="Website icon in the shape of a wire globe" src={Disect} style={{maxHeight: '160px'}} />
+                        <img alt="Mobile phone illustration" src={Disect} style={{maxHeight: '160px'}} />
                         <h1 className="hero">Straightforward design for small businesses.</h1>
                     </div>
                     <div className="chunk">
