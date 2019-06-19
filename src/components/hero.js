@@ -12,7 +12,7 @@ const Hero = ( ) => (
         <div className="hero-banner">
             <animated.div className="hero-skin" style={
                     useSpring({
-                        background: "#333",
+                        background: "#D14200",
                         from : {
                             background: "#fff",
                         }
