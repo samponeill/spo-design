@@ -188,6 +188,11 @@ label > .label-body {
 /* Layout - grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.tl-edges {
+  overflow: unset;
+  display: -webkit-box;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
