@@ -1,5 +1,6 @@
 import React from 'react'
 import Disect from '../static/dissect.svg'
+import { useSpring, animated } from "react-spring"
 
 import "../styles/_overrides.scss"
 import "../styles/_hero.scss"
@@ -9,7 +10,14 @@ import "../styles/_header.scss"
 const Hero = ( ) => (
     <>
         <div className="hero-banner">
-            <div className="hero-skin" style={{background: "#333"}}>
+            <animated.div className="hero-skin" style={
+                    useSpring({
+                        background: "#333",
+                        from : {
+                            background: "#fff",
+                        }
+                    })
+                }>
                 <div className="hero-wrapper">                        
                     <div className="chunk" style={{marginTop: '0.5'}}>
                         <img alt="Website icon in the shape of a wire globe" src={Disect} style={{maxHeight: '160px'}} />
@@ -19,7 +27,7 @@ const Hero = ( ) => (
                         <p>Looking to develop a brand identity, new website or whip up some marketing materials? We can help you stand&nbsp;out</p>
                     </div>           
                 </div>
-            </div>
+            </animated.div>
             <div className="hero-skin">
             </div>            
         </div>
