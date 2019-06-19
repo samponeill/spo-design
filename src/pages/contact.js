@@ -9,8 +9,8 @@ const ContactPage = () => (
         <SEO title="Contact us for a quote" />
         <main>
             <div className="chunk">
-                <h1>Get in touch</h1>
-                <p>Send us a message and we'll get back to you as soon as possible</p>
+                <h1><span role="img" aria-label="Phone hand">🤙 </span>Get in touch</h1>
+                <p>Want to talk about your project? Let's have a no-strings-attached chat and see how we can help you stand out</p>
             </div>
             <ContactForm></ContactForm>
         </main>

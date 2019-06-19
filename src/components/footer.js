@@ -15,6 +15,9 @@ const Footer = () => (
         </ul>
         </div>        
     </div>
+    <div className="chunk" style={{marginTop: "2rem", marginBottom: "4rem"}}>
+        <span style={{fontSize: "4rem"}} role="img" arial-label="Peace sign or V sign">✌️</span>
+    </div>
     </div>
 </footer>
       );
