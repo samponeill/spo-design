@@ -1,14 +1,6 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter + Strapi + Bulma
+  Gatsby + Strapi portfolio and blog
 </h1>
-
-Kick off your project with this default boilerplate with Bulma and Strapi integration. This starter ships with the main Gatsby configuration files rigged for making a blog site with Strapi styled with Bulma for easy customisation.
 
 ## Installation
 

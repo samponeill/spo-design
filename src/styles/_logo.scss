@@ -9,17 +9,10 @@
     text-align: center;
     vertical-align: middle;
     a {
-        padding: 1rem;
-        margin: 0;
         color: $primary;
-        font-size: $size4;
-        padding: 0 4px;
+        font-size: 2.4rem;
         letter-spacing: 0.25rem;        
     }
     p {
-    }
-}
-@media (min-width: 1200px) {
-    .logo {
     }
 }

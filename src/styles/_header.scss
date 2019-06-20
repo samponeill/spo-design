@@ -5,19 +5,33 @@ header.grid-header {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: $background;
+    background: $secondary;
     position: relative;
     z-index: 1000;
     line-height: 0.9;
     .header-container:first-child {
-        padding: 1.5rem 0;
+        padding: 1.5rem 4rem 2rem 4rem;
         display: block;
-        margin: 0.5rem auto 0 auto;
+        margin: 0 0 0.5rem 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: $primary;
+        a {
+            color: $background;
+        } 
     }
     .header-container:last-child {
-        padding: 0 0 4rem;
+        padding: 0;
         display: block;
-        margin: 0.5rem auto 0 auto;
+        margin: 0 auto 1rem auto;
+        text-align: center;
+        a {
+            color: $background;
+            border-color: rgba(255,255,255,.25);
+        }           
+        a:hover {
+            border-color: rgba(255,255,255,1);
+        }         
         .chunk {
             display: block;
             margin: 0 auto;            
@@ -34,19 +48,42 @@ header.grid-header {
         position: sticky;
         top: 0;
         transition: all 0.5s;
+        background: $background;
+        .header-container:first-child {
+            margin: 0 0 0.5rem 0;
+            background: none;
+                a {
+                    color: $primary;
+                    font-size: $size7;
+                    transition: font-size 0.25s;
+                    text-align: center;
+                }
+        }
+        .header-container:last-child {
+            padding: 0 0 4rem;
+            display: block;
+            margin: 0.5rem auto 0 auto;            
+            a {
+                color: $links;
+                border-bottom: $borderstyle rgba(0,0,231,.5);
+            }
+            a:hover {
+                color: $links;
+                border-color: $links;
+            }            
+        }
     }
     header.enabled {
         transition: all 0 0.5s;
-        background: $secondary;
+        background: $tertiary;
         .header-container:first-child {
-            font-size: 1.25rem;
-            margin: 0.25rem;
-            padding: 1rem 0 0;
+            padding: 1.5rem 0 0;
             transition: padding 0.5s;
             transition: margin 0.5s;
-            transition: font-size 0.05s;
             a {
                 color: $background;
+                font-size: 3rem;
+                transition: font-size 0.5s;
             }
         }
         .header-container:last-child {

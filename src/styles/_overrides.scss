@@ -10,6 +10,7 @@ $font-code: "source-code-pro", courier, monospace;
 $primary: #333333;
 $links: rgba(0,0,231,1);
 $secondary: rgb(209, 66, 0);
+$tertiary: #4A807A;
 $actionprimary: green;
 $actionsecondary: darkgreen;
 $warning: orange;
@@ -20,7 +21,8 @@ $border: #333;
 
 
 //Sizes
- 
+
+$size0: 1.2rem;
 $size1: 1.8rem;
 $size2: 2rem;
 $size3: 2.25rem;
