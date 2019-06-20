@@ -8,30 +8,60 @@ header.grid-header {
     background: $background;
     position: relative;
     z-index: 1000;
-    text-align: center;
     line-height: 0.9;
     .header-container:first-child {
-        margin: 0.5rem;
         padding: 1.5rem 0;
+        display: block;
+        margin: 0.5rem auto 0 auto;
     }
     .header-container:last-child {
         padding: 0 0 4rem;
+        display: block;
+        margin: 0.5rem auto 0 auto;
+        .chunk {
+            display: block;
+            margin: 0 auto;            
+            .navigation {
+                display: block;
+                
+            }
+        }
     }
-}
-
-@media (min-width: 768px) {
-  nav {
-      text-align: left;
-  }
-  nav ul li {
-      width: 100%;
-  }  
 }
 
 @media (min-width: 1200px) {
     header.grid-header {
         position: sticky;
         top: 0;
+        transition: all 0.5s;
+    }
+    header.enabled {
+        transition: all 0 0.5s;
+        background: $secondary;
+        .header-container:first-child {
+            font-size: 1.25rem;
+            margin: 0.25rem;
+            padding: 1rem 0 0;
+            transition: padding 0.5s;
+            transition: margin 0.5s;
+            transition: font-size 0.05s;
+            a {
+                color: $background;
+            }
+        }
+        .header-container:last-child {
+            padding: 0 0 1rem;
+            transition: all 0.5s;
+            margin: 1rem auto;
+            color: $background;
+            a {
+                color: $background;
+                border-color: rgba(255,255,255,.25);
+            }           
+            a:hover {
+                border-color: rgba(255,255,255,1);
+            }            
+        }        
     }
 }
 

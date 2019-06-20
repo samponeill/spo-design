@@ -1,16 +1,47 @@
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useRef }  from "react"
 import Logo from "./logo"
+import Helmet from "react-helmet"
 
 const Header = () => (
+<>
+<Helmet>
+  <script type="text/javascript">
+    {`
+        const headerEl = document.querySelector('.grid-header')
+        const sentinalEl = document.querySelector('.hero-banner')
+
+        console.log(headerEl);
+        
+        const handler = (entries) => {
+          console.log(entries)
+          // entries is an array of observed dom nodes
+          // we're only interested in the first one at [0]
+          // because that's our .sentinal node.
+          // Here observe whether or not that node is in the viewport
+          if (!entries[0].isIntersecting) {
+            headerEl.classList.add('enabled','shadow')
+          } else {
+            headerEl.classList.remove('enabled','shadow')
+          }
+        }
+        
+        // create the observer
+        const observer = new window.IntersectionObserver(handler)
+        // give the observer some dom nodes to keep an eye on
+        observer.observe(sentinalEl)
+      
+    `}
+  </script>
+</Helmet>
 <header className="grid-header">
 <div className="logo header-container">
   <div className="chunk">
     <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
   </div>
 </div>
-<div className="nav shadow header-container"> 
+<div className="nav header-container"> 
   <div className="chunk">
     <div className="navigation">
       <ul className="navbar">
@@ -22,6 +53,7 @@ const Header = () => (
   </div>
 </div>
 </header>
+</>
 )
 
 Header.propTypes = {

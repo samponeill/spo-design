@@ -8,7 +8,7 @@
 //import "./node_modules/slick-carousel/slick/slick.css"
 import "./node_modules/slick-carousel/slick/slick-theme.css"
 import "./src/styles/global.scss"
-import "./src/script/main.js"
+//import "./src/script/main.js"
 
 // ES5 way
 // exports.onClientEntry = () => {

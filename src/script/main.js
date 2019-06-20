@@ -1,27 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+window.onload = function() {
+  const headerEl = document.querySelector('header.grid-header.shadow')
+  const sentinalEl = document.querySelector('.hero-banner')
   
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-  
-      // Add a click event on each of them
-      $navbarBurgers.forEach( el => {
-        el.addEventListener('click', () => {
-  
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-  
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-  
-        });
-      });
+  const handler = (entries) => {
+    console.log(entries)
+    // entries is an array of observed dom nodes
+    // we're only interested in the first one at [0]
+    // because that's our .sentinal node.
+    // Here observe whether or not that node is in the viewport
+    if (!entries[0].isIntersecting) {
+      headerEl.classList.add('enabled')
+    } else {
+      headerEl.classList.remove('enabled')
     }
+  }
   
-  });
+  // create the observer
+  const observer = new window.IntersectionObserver(handler)
+  // give the observer some dom nodes to keep an eye on
+  observer.observe(sentinalEl)
 
-  
+}
