@@ -9,10 +9,9 @@ const Header = () => (
 <Helmet>
   <script type="text/javascript">
     {`
+      window.onload = function() {
         const headerEl = document.querySelector('.grid-header')
         const sentinalEl = document.querySelector('.hero-banner')
-
-        console.log(headerEl);
         
         const handler = (entries) => {
           console.log(entries)
@@ -32,6 +31,7 @@ const Header = () => (
         // give the observer some dom nodes to keep an eye on
         observer.observe(sentinalEl)
       
+      }     
     `}
   </script>
 </Helmet>
