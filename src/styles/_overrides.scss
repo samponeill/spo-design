@@ -8,6 +8,7 @@ $font-code: "source-code-pro", courier, monospace;
 //Theme colours
 
 $primary: #333333;
+$links: rgba(0,0,231,1);
 $secondary: rgb(209, 66, 0);
 $actionprimary: green;
 $actionsecondary: darkgreen;
@@ -51,4 +52,12 @@ $rad: 0;
 
 .shadow, .bubble {
     @include boxshadow();
+}
+
+@mixin gradient($colour1: #f857a6, $colour2: $secondary){
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2709c+0,ff9472+100 */
+    background: $colour1; /* Old browsers */
+    background: -moz-linear-gradient(left,  $colour1 0%, $colour2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  $colour1 0%,$colour2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  $colour1 0%,$colour2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }

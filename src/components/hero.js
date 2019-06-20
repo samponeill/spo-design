@@ -6,15 +6,14 @@ import "../styles/_overrides.scss"
 import "../styles/_hero.scss"
 import "../styles/_header.scss"
 
-
 const Hero = ( ) => (
     <>
         <div className="hero-banner">
             <animated.div className="hero-skin" style={
                     useSpring({
-                        background: "#D14200",
+                        opacity: "1",
                         from : {
-                            background: "#fff",
+                            opacity: "0",
                         }
                     })
                 }>

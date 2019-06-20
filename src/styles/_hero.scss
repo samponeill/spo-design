@@ -10,6 +10,9 @@
     height: calc(100vh - 96px);
     position: relative;
     z-index: 10000;
+    .hero-skin:first-child {
+      background: $secondary;
+    }
     .hero-skin {
         position: absolute;
         top: 0;
