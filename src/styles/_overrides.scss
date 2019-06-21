@@ -56,7 +56,7 @@ $rad: 0;
     @include boxshadow();
 }
 
-@mixin gradient($colour1: #f857a6, $colour2: $secondary){
+@mixin gradient($colour1: $tertiary, $colour2: $secondary){
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2709c+0,ff9472+100 */
     background: $colour1; /* Old browsers */
     background: -moz-linear-gradient(left,  $colour1 0%, $colour2 100%); /* FF3.6-15 */

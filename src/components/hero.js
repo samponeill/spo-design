@@ -1,5 +1,5 @@
 import React from 'react'
-import Disect from '../static/dissect.svg'
+import Disect from '../static/blob.svg'
 import { useSpring, animated } from "react-spring"
 
 import "../styles/_overrides.scss"
