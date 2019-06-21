@@ -96,6 +96,7 @@ header.grid-header {
                 border-color: rgba(255,255,255,.25);
             }           
             a:hover {
+                color: $background;
                 border-color: rgba(255,255,255,1);
             }            
         }        
