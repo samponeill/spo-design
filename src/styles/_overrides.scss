@@ -46,7 +46,7 @@ $rad: 0;
 
 //Box shadow
 
-@mixin boxshadow($h: 0px, $v: 6px, $b: 8px, $s: -2px, $brand-color: $altbackground){
+@mixin boxshadow($h: 0px, $v: 2px, $b: 5px, $s: -3px, $brand-color: $primary){
     -webkit-box-shadow : $h $v $b $s $brand-color;
     -moz-box-shadow : $h $v $b $s $brand-color;
     box-shadow : $h $v $b $s $brand-color;
