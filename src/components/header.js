@@ -13,7 +13,6 @@ const Header = () => (
         const headerEl = document.querySelector('.grid-header')
         const sentinalEl = document.querySelector('.hero-banner')
 
-        
         const handler = (entries) => {          
           // entries is an array of observed dom nodes
           // we're only interested in the first one at [0]
@@ -30,7 +29,11 @@ const Header = () => (
         // create the observer
         const observer = new window.IntersectionObserver(handler)
         // give the observer some dom nodes to keep an eye on
+        if (sentinalEl) {
         observer.observe(sentinalEl)
+        } else {
+          headerEl.classList.add('enabled','shadow');
+        }
       
       }     
     `}
