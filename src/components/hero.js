@@ -13,7 +13,7 @@ const Hero = ( ) => (
                     useSpring({
                         opacity: "1",
                         from : {
-                            opacity: "0",
+                            opacity: "1",
                         }
                     })
                 }>
