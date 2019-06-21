@@ -9,13 +9,12 @@ const Header = () => (
 <Helmet>
   <script type="text/javascript">
     {`
-      window.onload = function() {
         const headerEl = document.querySelector('.grid-header')
         const sentinalEl = document.querySelector('.hero-banner')
 
         if (sentinalEl == undefined) {
-          headerEl.classList.add('enabled','shadow')
-        }
+          headerEl.classList.add('enabled','shadow');
+        } else {
         
         const handler = (entries) => {          
           // entries is an array of observed dom nodes
@@ -29,13 +28,14 @@ const Header = () => (
             headerEl.classList.remove('enabled','shadow')
           }
         }
+
+        }
         
         // create the observer
         const observer = new window.IntersectionObserver(handler)
         // give the observer some dom nodes to keep an eye on
         observer.observe(sentinalEl)
       
-      }     
     `}
   </script>
 </Helmet>
