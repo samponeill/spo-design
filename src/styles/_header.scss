@@ -75,7 +75,7 @@ header.grid-header {
     }
     header.enabled {
         transition: all 0 0.5s;
-        background: $tertiary;
+        background: $secondary;
         .header-container:first-child {
             padding: 1.5rem 0 0;
             transition: padding 0.5s;
