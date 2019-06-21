@@ -13,14 +13,14 @@ const Header = () => (
         const headerEl = document.querySelector('.grid-header')
         const sentinalEl = document.querySelector('.hero-banner')
         
-        const handler = (entries) => {
-          console.log(entries)
+        const handler = (entries) => {          
           // entries is an array of observed dom nodes
           // we're only interested in the first one at [0]
           // because that's our .sentinal node.
           // Here observe whether or not that node is in the viewport
           if (!entries[0].isIntersecting) {
             headerEl.classList.add('enabled','shadow')
+            console.log("Look Ma, no scroll event")
           } else {
             headerEl.classList.remove('enabled','shadow')
           }
