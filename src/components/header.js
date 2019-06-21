@@ -22,7 +22,7 @@ const Header = () => (
             headerEl.classList.add('enabled','shadow')
             console.log("Look Ma, no scroll event")
           } else {
-            headerEl.classList.remove('enabled','shadow')
+            headerEl.classList.remove('enabled')
           }
         }
 
@@ -32,14 +32,14 @@ const Header = () => (
         if (sentinalEl) {
         observer.observe(sentinalEl)
         } else {
-          headerEl.classList.add('enabled','shadow');
+          headerEl.classList.add('enabled');
         }
       
       }     
     `}
   </script>
 </Helmet>
-<header className="grid-header">
+<header className="grid-header shadow">
 <div className="logo header-container">
   <div className="chunk">
     <Link style={{border: 'none'}} to="/"><Logo></Logo></Link>
