@@ -12,6 +12,10 @@ const Header = () => (
       window.onload = function() {
         const headerEl = document.querySelector('.grid-header')
         const sentinalEl = document.querySelector('.hero-banner')
+
+        if (sentinalEl == undefined) {
+          headerEl.classList.add('enabled','shadow')
+        }
         
         const handler = (entries) => {          
           // entries is an array of observed dom nodes
