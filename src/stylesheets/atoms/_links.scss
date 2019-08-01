@@ -1,0 +1,14 @@
+article a {
+    color: $links;
+    font-weight: 700;    
+    text-decoration: none;
+    color: $links;
+    border-bottom: $borderstyle rgba(0,0,231,.5);
+    transition: 200ms all ease-in-out;
+  }
+  
+  article a:hover,
+  article a:focus {
+    border-color: $links;
+    transition: 200ms all ease-in-out;
+}

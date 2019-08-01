@@ -1,0 +1,32 @@
+.a-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 32px;
+  border: 1px solid blue;
+  border-radius: 0px;
+  color: blue;
+  font-weight: 500;
+  white-space: nowrap;
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}
+
+.a-button--filled {
+  background-color: blue;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: blue;
+  }
+}
