@@ -133,6 +133,13 @@ export default props => (
                         type
                       }
                     }
+                    ... on PRISMIC_Form{
+                      _meta{
+                        uid
+                        id
+                        type
+                      }
+                    }                    
                   }
                 }
                 footer_nav_items{
@@ -153,6 +160,13 @@ export default props => (
                       }
                     }                    
                     ... on PRISMIC_Blog_home{
+                      _meta{
+                        uid
+                        id
+                        type
+                      }
+                    }
+                    ... on PRISMIC_Form{
                       _meta{
                         uid
                         id

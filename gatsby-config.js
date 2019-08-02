@@ -37,6 +37,11 @@ module.exports = {
           type: 'Homepage',
           path: '/',
           component: require.resolve('./src/pages/index.js')
+        },
+        {
+          type: 'Form',
+          path: '/:uid',
+          component: require.resolve('./src/templates/form.js')
         }],        
         sharpKeys: [
           /image|photo|picture/, // (default)

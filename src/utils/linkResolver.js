@@ -18,5 +18,8 @@ exports.linkResolver = function linkResolver(doc) {
   if (doc.type === 'content') {
     return '/' + doc.uid;
   }
+  if (doc.type === 'form') {
+    return '/' + doc.uid;
+  } 
   return '/';
 }

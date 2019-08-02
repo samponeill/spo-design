@@ -42,6 +42,20 @@
   color: $background;
   background: $primary;
   font-weight: 700;
+  background: linear-gradient(to right, $primary 50%, white 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  animation: headerAnim 1.5s ease forwards;  
+}
+
+@keyframes headerAnim {
+  from {
+    background-position:right bottom;
+  }
+
+  to {
+    background-position:left bottom;
+  }
 }
 
 .header-nav {

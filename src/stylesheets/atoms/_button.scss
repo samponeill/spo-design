@@ -1,12 +1,12 @@
-.a-button {
+.a-button, button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   padding: 0 32px;
-  border: 1px solid blue;
+  border: $borderstyle $links;
   border-radius: 0px;
-  color: blue;
+  color: $links;
   font-weight: 500;
   white-space: nowrap;
   transition-property: background-color, color;
@@ -16,17 +16,17 @@
   letter-spacing: 0.2px;
 
   &:hover {
-    background-color: blue;
+    background-color: $links;
     color: white;
   }
 }
 
 .a-button--filled {
-  background-color: blue;
+  background-color: $links;
   color: white;
 
   &:hover {
-    background-color: white;
-    color: blue;
+    background-color: $background;
+    color: $links;
   }
 }
