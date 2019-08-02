@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 
 import Layout from '../components/layouts'
@@ -23,9 +24,23 @@ query BlogPostQuery($uid: String) {
               name
               bio
               picture
+              pictureSharp {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }            
+              }              
             }
           }
           image
+          imageSharp {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }            
+          }          
           title
           rich_content
         }
@@ -42,8 +57,8 @@ const RenderBody = ({ blogPost }) => (
     </div>
 
     <article className="blog-post-article">
-      <div className="blog-post-image-wrapper">
-        <img className="blog-post-image" src={blogPost.image.url} alt={blogPost.image.alt}/>
+      <div className="l-wrapper blog-post-image-wrapper">
+        <Img className="blog-post-image" fluid={blogPost.imageSharp.childImageSharp.fluid} alt={blogPost.image.alt}/>
       </div>      
       <div className="blog-post-inner">
         <div className="blog-post-title">
@@ -54,7 +69,7 @@ const RenderBody = ({ blogPost }) => (
         </div>
         <div className="blog-post-author-wrapper">
           {blogPost.author && blogPost.author.picture
-            ? <img className="blog-post-author-picture" src={blogPost.author.picture.url} alt={blogPost.author.picture.alt} />
+            ? <Img className="blog-post-author-picture" fluid={blogPost.author.pictureSharp.childImageSharp.fluid} alt={blogPost.author.picture.alt} />
             : ''
           }
           <div>

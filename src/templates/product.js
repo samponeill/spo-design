@@ -1,7 +1,7 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layouts'

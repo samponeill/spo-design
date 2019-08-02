@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
 import { Link, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layouts'
 
@@ -33,6 +34,13 @@ export const query = graphql`
           }
           case_study_name
           case_study_image
+          case_study_imageSharp {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }        
+          }
           sub_title
         }
       }
@@ -45,7 +53,7 @@ const RenderProductList = ({ products }) => {
   return products.map((item) =>
     <div key={item.node._meta.uid} className="products-grid-item-wrapper">
       <Link to={linkResolver(item.node._meta)}>
-        <img className="products-grid-item-image" src={item.node.case_study_image.url} alt={item.node.case_study_image.alt}/>
+        <Img className="products-grid-item-image" fluid={item.node.case_study_imageSharp.childImageSharp.fluid} alt={item.node.case_study_image.alt}/>
         <p className="products-grid-item-name">
             {RichText.asText(item.node.case_study_name)}
         </p>

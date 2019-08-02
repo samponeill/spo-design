@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
 import { Link, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layouts'
 
@@ -32,6 +33,13 @@ export const query = graphql`
           }
           title
           image
+          imageSharp {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }            
+          }
           rich_content        
         }
       }
@@ -44,7 +52,7 @@ const RenderPosts = ({ posts }) => {
   return posts.map((item) =>
     <div key={item.node._meta.uid} className="blog-home-post-wrapper">
       <article>
-        <img className="blog-home-post-image" src={item.node.image.url} alt={item.node.image.alt} />
+        <Img className="blog-home-post-image" fluid={item.node.imageSharp.childImageSharp.fluid} alt={item.node.image.alt} />
         <h2 className="blog-home-post-title">
           {RichText.asText(item.node.title)}
         </h2>

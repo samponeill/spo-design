@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
 import { graphql } from 'gatsby';
 import { CTABanner, FeaturedItems, NumberedItems, Separator, TextBlock } from '../components/slices'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layouts'
 
@@ -19,6 +20,13 @@ export const query = graphql`
           }
           title
           banner_image
+          banner_imageSharp {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }            
+          }          
           banner_text
           cta_label
           body {
@@ -30,7 +38,7 @@ export const query = graphql`
                 button_label
                 button_link{
                   __typename
-                  ... on PRISMIC_Products {
+                  ... on PRISMIC_Case_study {
                     title
                     _meta {
                       uid
@@ -46,9 +54,16 @@ export const query = graphql`
                 link_to_product {
                   __typename
                   _linkType
-                  ... on PRISMIC_Product {
-                    product_name
-                    product_image
+                  ... on PRISMIC_Case_study {
+                    case_study_name
+                    case_study_image
+                    case_study_imageSharp {
+                      childImageSharp {
+                        fluid(maxWidth: 1200, quality: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }            
+                    }                    
                     sub_title
                     _meta{
                       uid
@@ -65,6 +80,13 @@ export const query = graphql`
               type
               primary {
                 image_banner
+                image_bannerSharp {
+                  childImageSharp {
+                    fluid(maxWidth: 1200, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }            
+                }                
                 banner_title
                 banner_text
                 cta_label
@@ -144,7 +166,7 @@ const RenderSlices = ({ slices }) => {
   })
 }
 
-const RenderBody = ({ home }) => (
+const RenderIndexBody = ({ home }) => (
   <React.Fragment>
     <header className="homepage-header">
       <div className="l-wrapper">
@@ -155,7 +177,7 @@ const RenderBody = ({ home }) => (
     </header>
 
     <section className="homepage-banner">
-      <img className="homepage-banner-image" src={home.banner_image.url} alt={home.banner_image.alt} />
+      <Img className="homepage-banner-image" fluid={home.banner_imageSharp.childImageSharp.fluid} alt={home.banner_image.alt} />
       <div className="homepage-banner-box-wrapper">
         <div className="homepage-banner-box">
         {RichText.render(home.banner_text, linkResolver)}   
@@ -172,11 +194,11 @@ const RenderBody = ({ home }) => (
 export default ({ data }) => {
   // Required check for no data being returned
   const doc = data.prismic.allHomepages.edges.slice(0,1).pop();
-  if(!doc) return null;
+  if(!doc) return console.log(doc);
   
   return(
     <Layout>
-      <RenderBody home={doc.node} />
+      <RenderIndexBody home={doc.node} />
     </Layout>
   )
 
