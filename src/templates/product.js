@@ -77,6 +77,8 @@ const RenderBody = ({ product }) => (
           <div className="product-description-content">
             {RichText.render(product.case_study_description, linkResolver)}
           </div>
+          <div className="product-supporting-image">
+          </div>
         </div>
       </section>
 
