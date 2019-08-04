@@ -184,7 +184,6 @@ const RenderIndexBody = ({ home }) => (
         </div>
       </div>
     </section>
-
     <div className="homepage-slices-wrapper">
       <RenderSlices slices={home.body} />
     </div>
