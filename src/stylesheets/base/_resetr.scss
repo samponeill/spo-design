@@ -339,3 +339,12 @@ video {
   color: #000;
   text-shadow: none;
 }
+
+*::selection {
+  background: $links;
+  color: #fff; 
+}
+*::-moz-selection {
+  background: $links;
+  color: #fff; 
+}
