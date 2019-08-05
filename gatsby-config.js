@@ -75,10 +75,12 @@ module.exports = {
       options: {
         name: 'spo-design-co',
         short_name: 'portfolio',
+        display: 'minimal-ui',
+        background_color: '#fff',
+        theme_color: '#333',
         start_url: '/',
         icon: 'src/static/icon-512x512.png', // This path is relative to the root of the site.
-      },
-    }    
+      },    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
