@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
-  color: #7f7d7c;
+  color: $primary;
   @media (max-width: 1000px) {
     flex-wrap: nowrap;
     flex-direction: column;
