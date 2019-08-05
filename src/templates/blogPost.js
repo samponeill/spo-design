@@ -26,7 +26,7 @@ query BlogPostQuery($uid: String) {
               picture
               pictureSharp {
                 childImageSharp {
-                  fluid(maxWidth: 300, quality: 100) {
+                  fluid(maxWidth: 300, quality: 60) {
                     ...GatsbyImageSharpFluid
                   }
                 }            
@@ -36,7 +36,7 @@ query BlogPostQuery($uid: String) {
           image
           imageSharp {
             childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
+              fluid(maxWidth: 1200, quality: 60) {
                 ...GatsbyImageSharpFluid
               }
             }            

@@ -23,7 +23,7 @@ query ProductQuery($uid: String) {
           case_study_image
           case_study_imageSharp {
             childImageSharp {
-              fluid(maxWidth: 1900, quality: 100) {
+              fluid(maxWidth: 1100, quality: 60) {
                 ...GatsbyImageSharpFluid
               }
             }   
@@ -43,7 +43,7 @@ query ProductQuery($uid: String) {
                 image
                 imageSharp {
                   childImageSharp {
-                    fluid(maxWidth: 1900, quality: 100) {
+                    fluid(maxWidth: 1100, quality: 60) {
                       ...GatsbyImageSharpFluid
                     }
                   }   

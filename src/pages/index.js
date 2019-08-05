@@ -26,7 +26,7 @@ query HomepageQuery {
           banner_image
           banner_imageSharp {
             childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
+              fluid(maxWidth: 1200, quality: 60) {
                 ...GatsbyImageSharpFluid
               }
             }            
@@ -63,7 +63,7 @@ query HomepageQuery {
                     case_study_image
                     case_study_imageSharp {
                       childImageSharp {
-                        fluid(maxWidth: 1200, quality: 100) {
+                        fluid(maxWidth: 1200, quality: 60) {
                           ...GatsbyImageSharpFluid
                         }
                       }            
@@ -86,7 +86,7 @@ query HomepageQuery {
                 image_banner
                 image_bannerSharp {
                   childImageSharp {
-                    fluid(maxWidth: 1200, quality: 100) {
+                    fluid(maxWidth: 1200, quality: 60) {
                       ...GatsbyImageSharpFluid
                     }
                   }            

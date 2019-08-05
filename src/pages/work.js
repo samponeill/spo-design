@@ -36,7 +36,7 @@ export const query = graphql`
           case_study_image
           case_study_imageSharp {
             childImageSharp {
-              fluid(maxWidth: 500, quality: 100) {
+              fluid(maxWidth: 500, quality: 60) {
                 ...GatsbyImageSharpFluid
               }
             }        

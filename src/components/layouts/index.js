@@ -28,6 +28,7 @@ class Layout extends React.Component {
   render() {
     const { data } = this.props;
     const layoutData = data.prismic.allLayouts.edges[0].node;
+    const metaData = data.prismic.allHomepages.edges[0].node;
 
     const headerItems = layoutData.header_nav_items.map((item) =>
       <Link key={item.link._meta.id} className="header-nav-link" to={linkResolver(item.link._meta)}>
@@ -55,12 +56,14 @@ class Layout extends React.Component {
 
     // Call to render the classic edit button
     //if (process.browser) window.prismic.setupEditButton();
+    console.log(metaData)
 
     return(
       <React.Fragment>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{layoutData.site_name}</title>
+          <meta name="description" content={metaData.meta_description[0].text} />
+          <title>{metaData.meta_title[0].text}</title>
         </Helmet>
         <div className={`header${this.state.menuOpen ? ' header--is-nav-opened' : ''}`} id="header">
           <div className="header-inner">
@@ -104,6 +107,14 @@ export default props => (
     query={graphql`
       query{
         prismic{
+          allHomepages {
+            edges {
+              node {
+                meta_description
+                meta_title
+              }
+            }
+          }          
           allLayouts(uid:null){
             edges{
               node{
