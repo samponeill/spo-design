@@ -2,7 +2,11 @@ import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../utils/linkResolver'
 import { graphql } from 'gatsby';
-import { CTABanner, FeaturedItems, NumberedItems, Separator, TextBlock } from '../components/slices'
+import CTABanner from '../components/slices/CTABanner'
+import FeaturedItems from '../components/slices/FeaturedItems'
+import NumberedItems from '../components/slices/NumberedItems'
+import Separator from '../components/slices/Separator'
+import TextBlock from '../components/slices/TextBlock'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layouts'

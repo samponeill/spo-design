@@ -2,11 +2,15 @@ const { apiEndpoint } = require('./prismic-configuration');
 var repo = /([^\/]+)\.prismic\.io/.exec(apiEndpoint);
 var token = apiEndpoint.accessToken;
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `SPO Design Co`,
     description: `Gatsby + Prismic portfolio and blog`,
-    author: `@raulg & Sam O'Neill`,
+    author: `Sam O'Neill`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +20,7 @@ module.exports = {
         repositoryName: repo[1],
         path: '/preview',
         previews: true,
-        accessToken: token,
+        accessToken: `${process.env.API_KEY}`,
         pages: [{
           type: 'Case_study',
           match: '/work/:uid',
