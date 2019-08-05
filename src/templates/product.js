@@ -151,7 +151,6 @@ const RenderBody = ({ product }) => (
 
 const Product = props => {
   const doc = props.data.prismic.allCase_studys.edges.slice(0,1).pop();
-  console.log(doc)
   if(!doc) return null;
 
   return (
