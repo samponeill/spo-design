@@ -46,7 +46,7 @@ const RenderBody = ({ content }) => (
   </React.Fragment>
 )
 
-const content = props => {
+const Content = props => {
   const doc = props.data.prismic.allContents.edges.slice(0,1).pop();
   if(!doc) return null;
 
@@ -61,4 +61,4 @@ const content = props => {
   )
 }
 
-export default content;
+export default Content;

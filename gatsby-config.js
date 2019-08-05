@@ -1,6 +1,5 @@
 const { apiEndpoint } = require('./prismic-configuration');
 var repo = /([^\/]+)\.prismic\.io/.exec(apiEndpoint);
-var token = apiEndpoint.accessToken;
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -21,6 +20,7 @@ module.exports = {
         path: '/preview',
         previews: true,
         accessToken: `${process.env.API_KEY}`,
+        omitPrismicScript: true,
         pages: [{
           type: 'Case_study',
           match: '/work/:uid',

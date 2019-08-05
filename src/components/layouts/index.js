@@ -54,7 +54,7 @@ class Layout extends React.Component {
     })
 
     // Call to render the classic edit button
-    if (process.browser) window.prismic.setupEditButton();
+    //if (process.browser) window.prismic.setupEditButton();
 
     return(
       <React.Fragment>

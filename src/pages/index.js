@@ -12,7 +12,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layouts'
 
 export const query = graphql`
-{
+query HomepageQuery {
   prismic {
     allHomepages {
       edges {
@@ -194,16 +194,16 @@ const RenderIndexBody = ({ home }) => (
   </React.Fragment>
 );
 
-export default ({ data }) => {
-  // Required check for no data being returned
-  const doc = data.prismic.allHomepages.edges.slice(0,1).pop();
-  if(!doc) return console.log(doc);
-  
+const Index = data => {
+  console.log(data)
+  const doc = data.data.prismic.allHomepages.edges.slice(0,1).pop();
+  if(!doc) return null;
+
   return(
     <Layout>
       <RenderIndexBody home={doc.node} />
     </Layout>
   )
-
 }
 
+export default Index;
