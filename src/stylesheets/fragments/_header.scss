@@ -7,11 +7,11 @@
 }
 
 .header--is-nav-opened {
+
   .header-nav {
     opacity: 1;
     visibility: visible;
     z-index: 100;
-    position: fixed;
   }
 
   .header-burger-img--closed {
@@ -70,7 +70,7 @@
     flex-direction: column;
     margin-left: 0;
     padding-top: 13px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
