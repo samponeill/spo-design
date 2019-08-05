@@ -49,9 +49,6 @@ query BlogPostQuery($uid: String) {
   }
 }
 `
-//const sharpImage = get(blogPost, 'blogPost.imageSharp.childImageSharp.fluid');
-//console.log(sharpImage)
-
 const RenderBody = ({ blogPost }) => (
   <React.Fragment>
     <div className="l-wrapper">

@@ -195,7 +195,6 @@ const RenderIndexBody = ({ home }) => (
 );
 
 const Index = data => {
-  console.log(data)
   const doc = data.data.prismic.allHomepages.edges.slice(0,1).pop();
   if(!doc) return null;
 
