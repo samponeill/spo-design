@@ -4,9 +4,9 @@ var token = apiEndpoint.accessToken;
 
 module.exports = {
   siteMetadata: {
-    title: `Coffee Shop Demo`,
-    description: `Gatsby + Prismic!`,
-    author: `@raulg`,
+    title: `SPO Design Co`,
+    description: `Gatsby + Prismic portfolio and blog`,
+    author: `@raulg & Sam O'Neill`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,9 +1,9 @@
 {
-  "name": "prismic-gatsby-coffee-sample",
+  "name": "spo-design-co",
   "private": true,
-  "description": "A sample website built using Gatsby connected to Prismic data source",
+  "description": "Next generation web design for your enterprise",
   "version": "0.1.0",
-  "author": "Raul Gonzalez @raulg",
+  "author": "Sam O'Neill",
   "dependencies": {
     "gatsby": "^2.13.46",
     "gatsby-cli": "^2.7.26",
@@ -45,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raulg/prismic-gatsby-coffee-sample"
+    "url": "https://github.com/samponeill/spo-design"
   }
 }
