@@ -69,11 +69,11 @@
     flex-direction: column;
     margin-left: 0;
 
-    position: absolute;
-    top: 92px;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    min-height: calc(100vh - 92px);
+    min-height: calc(100vh);
     background-color: #f6f6f6;
     font-size: 30px;
     opacity: 0;
@@ -99,7 +99,7 @@
 
 .header-burger {
   display: none;
-
+  z-index: 101;
   position: relative;
   width: 32px;
   height: 32px;
