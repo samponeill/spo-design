@@ -69,7 +69,16 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-netlify-cache'
+    'gatsby-plugin-netlify-cache',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'spo-design-co',
+        short_name: 'portfolio',
+        start_url: '/',
+        icon: 'src/static/icon-512x512.png', // This path is relative to the root of the site.
+      },
+    }    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
