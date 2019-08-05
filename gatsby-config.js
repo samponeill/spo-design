@@ -24,7 +24,7 @@ module.exports = {
         pages: [{
           type: 'Case_study',
           match: '/work/:uid',
-          path: '/work',
+          path: '/case-study',
           component: require.resolve('./src/templates/product.js')
         },{
           type: 'Blog_post',

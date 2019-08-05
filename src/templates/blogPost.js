@@ -4,7 +4,7 @@ import { linkResolver } from '../utils/linkResolver'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
+import get from 'lodash/get';
 
 import Layout from '../components/layouts'
 
@@ -49,6 +49,8 @@ query BlogPostQuery($uid: String) {
   }
 }
 `
+//const sharpImage = get(blogPost, 'blogPost.imageSharp.childImageSharp.fluid');
+//console.log(sharpImage)
 
 const RenderBody = ({ blogPost }) => (
   <React.Fragment>
