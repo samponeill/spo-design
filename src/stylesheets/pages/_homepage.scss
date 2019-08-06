@@ -38,7 +38,7 @@
 .homepage-banner-image {
   width: 100%;
   height: 600px;
-  background-color: #f6f6f6;
+  @include gradient();
   object-fit: cover;
   object-position: left center;
 
@@ -64,13 +64,13 @@
 
 .homepage-banner-box {
   position: relative;
-  top: 180px;
+  top: -90px;
   width: 100%;
   max-width: 565px;
   margin-left: auto;
   padding: 70px;
-  background-color: #121212;
-  color: white;
+  background-color: $primary;
+  color: $background;
   font-size: 17px;
   line-height: 2.353;
 
