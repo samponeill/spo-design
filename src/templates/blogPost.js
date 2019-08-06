@@ -4,7 +4,6 @@ import { linkResolver } from '../utils/linkResolver'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import get from 'lodash/get';
 
 import Layout from '../components/layouts'
 
