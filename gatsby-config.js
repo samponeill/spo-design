@@ -20,7 +20,7 @@ module.exports = {
         path: '/preview',
         previews: true,
         accessToken: `${process.env.API_KEY}`,
-        omitPrismicScript: true,
+        omitPrismicScript: false,
         pages: [{
           type: 'Case_study',
           path: '/work/:uid',
