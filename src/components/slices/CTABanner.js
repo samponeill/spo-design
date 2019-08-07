@@ -16,7 +16,6 @@ export default ({ slice }) =>
           <div className="cta-banner-text">
             {RichText.render(slice.primary.banner_text, linkResolver)}
             <div className="cta-banner-link-wrapper">
-              {console.log(slice.primary.cta_link)}
               <Link className="cta-banner-link" to={linkResolver(slice.primary.cta_link._meta)}>
                 {slice.primary.cta_label}
               </Link>
