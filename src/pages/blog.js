@@ -32,6 +32,7 @@ export const query = graphql`
             type
           }
           title
+          standfirst
           image
           imageSharp {
             childImageSharp {
@@ -57,7 +58,7 @@ const RenderPosts = ({ posts }) => {
           {RichText.asText(item.node.title)}
         </h2>
         <p className="blog-home-post-excerpt">
-          {RichText.asText(item.node.rich_content).substring(0, 158)} …
+          {RichText.asText(item.node.standfirst)}
         </p>
         <div className="blog-home-post-button-wrapper">
           <Link className="a-button" to={linkResolver(item.node._meta)}>
