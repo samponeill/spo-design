@@ -54,11 +54,11 @@ const RenderBody = ({ blogPost }) => (
       <hr className="separator-hr" />
     </div>
 
-    <article className="blog-post-article">
-      <div className="l-wrapper blog-post-image-wrapper">
-        <Img className="blog-post-image" fluid={blogPost.imageSharp.childImageSharp.fluid} alt={blogPost.image.alt}/>
-      </div>      
+    <article className="blog-post-article">    
       <div className="blog-post-inner">
+        <div className="blog-post-image-wrapper">
+          <Img className="blog-post-image" fluid={blogPost.imageSharp.childImageSharp.fluid} alt={blogPost.image.alt}/>
+        </div>        
         <div className="blog-post-title">
           {RichText.render(blogPost.title, linkResolver)}
         </div>

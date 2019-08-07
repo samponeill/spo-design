@@ -1,14 +1,35 @@
+
 article a {
-    color: $links;
-    font-weight: 700;    
-    text-decoration: none;
-    color: $links;
-    border-bottom: $borderstyle rgba(0,0,231,.5);
-    transition: 200ms all ease-in-out;
+  display: inline-block;
+  color: $links;
+  transition: color 250ms;
+  text-decoration: none;
+  color: $links;
+  font-weight: 700;    
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: $links;
+    transition: all 250ms;
+  }
+
+  &:hover {
+    color: white;
+    
+    &::after {
+      height: 100%;
+      width: 100%;
+    }
+    
   }
   
-  article a:hover,
-  article a:focus {
-    border-color: $links;
-    transition: 200ms all ease-in-out;
 }

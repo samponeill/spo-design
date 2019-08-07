@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Sam O'Neill",
   "dependencies": {
+    "a11y-react-emoji": "^1.0.2",
     "gatsby": "^2.13.46",
     "gatsby-cli": "^2.7.26",
     "gatsby-image": "^2.2.8",

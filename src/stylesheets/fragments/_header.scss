@@ -37,26 +37,38 @@
   }
 }
 
+@mixin gradientanim {
+  background: $primary;
+  background: -moz-linear-gradient(to right, $primary 50%, rgba(255,255,255,0) 50%);
+  background: -webkit-linear-gradient(to right, $primary 50%, rgba(255,255,255,0) 50%);
+  background: linear-gradient(to right, $primary 50%, rgba(255,255,255,0) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#333333',GradientType=0 );
+}
+
 .header-name {
   flex-shrink: 0;
   font-size: 2rem;
   padding: 10px 20px 20px 20px;
   color: $background;
-  background: $primary;
+  @include gradientanim();
   font-weight: 700;
-  background: linear-gradient(to right, $primary 50%, white 50%);
   background-size: 200% 100%;
   background-position:right bottom;
-  animation: headerAnim 1.5s ease forwards;  
+  animation: headerAnim .6s ease-in-out forwards;  
 }
 
 @keyframes headerAnim {
-  from {
+  0% {
     background-position:right bottom;
+    color: rgba(255,255,255,0);    
   }
-
-  to {
+  50% {
     background-position:left bottom;
+    color: rgba(255,255,255,0);
+  }
+  100% {
+    background-position:left bottom;
+    color: rgba(255,255,255,1);
   }
 }
 

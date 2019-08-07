@@ -1,10 +1,8 @@
 .footer {
   min-height: 420px;
   padding: 90px 0;
-  @include gradient();  
-  @media (max-width: 1680px) {
-    background-size: cover;
-  }
+  background: $primary;
+  background-size: 250% 250%;
 }
 
 .footer-inner {
@@ -32,6 +30,7 @@
   font-size: 28px;
   font-weight: 700;
   font-family: $font-secondary;
+  color: $background;
 }
 
 .footer-social-items {
@@ -60,7 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
-  color: $primary;
+  color: $background;
 
   @media (max-width: 1000px) {
     flex-wrap: nowrap;
