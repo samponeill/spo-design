@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link as PrismicLink, RichText } from 'prismic-reactjs'
+import { Link } from "gatsby"
 import { linkResolver } from '../../utils/linkResolver'
 import Img from 'gatsby-image'
 
@@ -15,9 +16,10 @@ export default ({ slice }) =>
           <div className="cta-banner-text">
             {RichText.render(slice.primary.banner_text, linkResolver)}
             <div className="cta-banner-link-wrapper">
-              <a className="cta-banner-link" href={PrismicLink.url(slice.primary.cta_link, linkResolver)}>
-              {slice.primary.cta_label}
-              </a>
+              {console.log(slice.primary.cta_link)}
+              <Link className="cta-banner-link" to={linkResolver(slice.primary.cta_link._meta)}>
+                {slice.primary.cta_label}
+              </Link>
             </div>            
           </div>
         </div>

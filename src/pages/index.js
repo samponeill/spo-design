@@ -99,6 +99,34 @@ query HomepageQuery {
                   ... on PRISMIC__ExternalLink {
                     url
                   }
+                  ... on PRISMIC_Work{
+                    _meta{
+                      uid
+                      id
+                      type
+                    }
+                  }
+                  ... on PRISMIC_Content{
+                    _meta{
+                      uid
+                      id
+                      type
+                    }
+                  }                    
+                  ... on PRISMIC_Blog_home{
+                    _meta{
+                      uid
+                      id
+                      type
+                    }
+                  }
+                  ... on PRISMIC_Form{
+                    _meta{
+                      uid
+                      id
+                      type
+                    }
+                  }                                   
                 }
               }
             }

@@ -1,12 +1,8 @@
 exports.linkResolver = function linkResolver(doc) {
-
-  if (doc.type === 'homepage') {
-    return '/';
-  }
   if (doc.type === 'work') {
     return '/work';
   }
-  if (doc.type === 'case_study') {
+  if (doc.type === 'case_study') {    
     return '/work/' + doc.uid;
   }
   if (doc.type === 'blog_home') {
