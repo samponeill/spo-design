@@ -23,18 +23,15 @@ module.exports = {
         omitPrismicScript: true,
         pages: [{
           type: 'Case_study',
-          match: '/work/:uid',
-          path: '/work',
+          path: '/work/:uid',
           component: require.resolve('./src/templates/product.js')
         },{
           type: 'Blog_post',
-          match: '/articles/:uid',
-          path: '/blog',
+          path: '/articles/:uid',
           component: require.resolve('./src/templates/blogPost.js')
         },{
           type: 'Content',
-          match: '/:uid',
-          path: '/',
+          path: '/:uid',
           component: require.resolve('./src/templates/content.js')
         },
         {

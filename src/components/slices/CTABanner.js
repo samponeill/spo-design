@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link as PrismicLink, RichText } from 'prismic-reactjs'
+import { RichText } from 'prismic-reactjs'
 import { Link } from "gatsby"
 import { linkResolver } from '../../utils/linkResolver'
 import Img from 'gatsby-image'
