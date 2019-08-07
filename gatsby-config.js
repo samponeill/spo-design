@@ -10,9 +10,11 @@ module.exports = {
     title: `SPO Design Co`,
     description: `Gatsby + Prismic portfolio and blog`,
     author: `Sam O'Neill`,
+    siteUrl: 'https://spo.design'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
@@ -78,7 +80,15 @@ module.exports = {
         start_url: '/',
         icon: 'src/static/icon-512x512.png', // This path is relative to the root of the site.
       },
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://spo.design',
+        sitemap: 'https://spo.design/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
