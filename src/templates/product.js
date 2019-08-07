@@ -75,8 +75,8 @@ query ProductQuery($uid: String) {
 }
 `
 function handleClickAddCart(event) {
-  event.preventDefault()
-  window.alert(`No. Not today.\nWe're integrating the GraphQL API at the moment, so coffee delivery is temporarily unavailable.`)
+  //event.preventDefault()
+  //window.alert(`No. Not today.\nWe're integrating the GraphQL API at the moment, so coffee delivery is temporarily unavailable.`)
 }
 
 const RenderSlices = ({ slices }) => {
@@ -113,7 +113,7 @@ const RenderBody = ({ product }) => (
               <div className="product-hero-rich-content">
                 {RichText.render(product.rich_content, linkResolver)}
               </div>
-              <div className="product-hero-button-wrapper">
+              <div className="product-hero-button-wrapper" style={{display: none}}>
                 <a className="a-button a-button--filled" href={product.button_link.url} onClick={handleClickAddCart}>
                   {RichText.asText(product.button_label)}
                 </a>
