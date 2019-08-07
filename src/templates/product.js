@@ -113,7 +113,7 @@ const RenderBody = ({ product }) => (
               <div className="product-hero-rich-content">
                 {RichText.render(product.rich_content, linkResolver)}
               </div>
-              <div className="product-hero-button-wrapper" style={{display: none}}>
+              <div className="product-hero-button-wrapper">
                 <a className="a-button a-button--filled" href={product.button_link.url} onClick={handleClickAddCart}>
                   {RichText.asText(product.button_label)}
                 </a>
