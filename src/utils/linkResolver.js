@@ -9,7 +9,7 @@ exports.linkResolver = function linkResolver(doc) {
     return '/blog';
   }
   if (doc.type === 'blog_post') {
-    return '/blog/' + doc.uid;
+    return '/articles/' + doc.uid;
   }
   if (doc.type === 'content') {
     return '/' + doc.uid;

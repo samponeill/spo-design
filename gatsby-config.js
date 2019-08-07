@@ -28,7 +28,7 @@ module.exports = {
           component: require.resolve('./src/templates/product.js')
         },{
           type: 'Blog_post',
-          match: '/blog/:uid',
+          match: '/articles/:uid',
           path: '/blogpost',
           component: require.resolve('./src/templates/blogPost.js')
         },{
