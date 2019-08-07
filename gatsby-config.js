@@ -29,7 +29,7 @@ module.exports = {
         },{
           type: 'Blog_post',
           match: '/articles/:uid',
-          path: '/blogpost',
+          path: '/blog-post',
           component: require.resolve('./src/templates/blogPost.js')
         },{
           type: 'Content',
