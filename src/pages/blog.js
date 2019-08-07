@@ -23,7 +23,7 @@ export const query = graphql`
         }
       }
     }
-    allBlog_posts{
+    allBlog_posts(sortBy: meta_firstPublicationDate_DESC) {
       edges{
         node{
           _meta{
