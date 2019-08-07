@@ -37,7 +37,7 @@ const RenderBody = ({ form }) => (
     <div className="blog-post-article">
         <div className="blog-post-inner">
             <div className="blog-post-title">
-                <h1><span role="img" aria-label="Phone hand">🤙 </span>{RichText.render(form.form_name, linkResolver)}</h1>
+                <h1>{RichText.render(form.form_name, linkResolver)}</h1>
             </div>
             <div className="blog-post-rich-content">
                 <p>Want to talk about your project? Let's have a no-strings-attached chat and see how we can help you stand out</p>
