@@ -24,12 +24,12 @@ module.exports = {
         pages: [{
           type: 'Case_study',
           match: '/work/:uid',
-          path: '/case-study',
+          path: '/work',
           component: require.resolve('./src/templates/product.js')
         },{
           type: 'Blog_post',
           match: '/articles/:uid',
-          path: '/blog-post',
+          path: '/blog',
           component: require.resolve('./src/templates/blogPost.js')
         },{
           type: 'Content',
