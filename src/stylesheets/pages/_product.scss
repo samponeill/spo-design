@@ -27,7 +27,6 @@
   max-height: 565px;
   height: 100%;
   object-fit: cover;
-  @include gradient();
   @media (max-width: 1190px) {
     max-width: none;
   }  
