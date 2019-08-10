@@ -16,6 +16,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-138288323-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/preview/**"],
+        pageTransitionDelay: 0,
+      },
+    },    
+    {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
         repositoryName: repo[1],

@@ -1,0 +1,75 @@
+{
+    "Main" : {
+      "form_name" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Form name",
+          "placeholder" : "Contact"
+        }
+      },
+      "label_one" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "allowTargetBlank" : true,
+          "label" : "Label One",
+          "placeholder" : "Name"
+        }
+      },
+      "label_two" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "allowTargetBlank" : true,
+          "label" : "Label two",
+          "placeholder" : "Email address"
+        }
+      },
+      "label_three" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "allowTargetBlank" : true,
+          "label" : "Label three",
+          "placeholder" : "Message"
+        }
+      },
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "choices" : { }
+        }
+      }
+    },
+    "SEO" : {
+      "uid" : {
+        "type" : "UID",
+        "config" : {
+          "label" : "UID"
+        }
+      },
+      "meta_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Meta Title"
+        }
+      },
+      "meta_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Meta description"
+        }
+      },
+      "canonical_url" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Canonical URL"
+        }
+      }
+    }
+  }

@@ -6,9 +6,30 @@
           "single" : "heading1",
           "label" : "Title"
         }
+      },
+      "rich_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, heading2, strong, em, hyperlink, image",
+          "allowTargetBlank" : true,
+          "label" : "Rich content"
+        }
+      },
+      "canonical_url1" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Canonical URL"
+        }
       }
     },
     "SEO & Social" : {
+      "uid" : {
+        "type" : "UID",
+        "config" : {
+          "label" : "UID"
+        }
+      },
       "meta_title" : {
         "type" : "StructuredText",
         "config" : {
