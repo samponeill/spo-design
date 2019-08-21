@@ -13,6 +13,10 @@ $border: #333;
 $grad1: rgba(199,255,239,0.4);
 $grad2: rgba(243,208,253,0.4);
 
+@mixin shadow {
+    box-shadow: 0 0 6px $links;
+}
+
 @mixin gradient {
     background: $grad1 url('./../images/footer-background.png') no-repeat center;
     background: -moz-linear-gradient(45deg,  $grad1 0%, $grad2 100%); /* FF3.6-15 */

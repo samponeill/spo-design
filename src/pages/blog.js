@@ -52,20 +52,22 @@ export const query = graphql`
 const RenderPosts = ({ posts }) => {
   return posts.map((item) =>
     <div key={item.node._meta.uid} className="blog-home-post-wrapper">
-      <article>
-        <Img className="blog-home-post-image" fluid={item.node.imageSharp.childImageSharp.fluid} alt={item.node.image.alt} />
-        <h2 className="blog-home-post-title">
-          {RichText.asText(item.node.title)}
-        </h2>
-        <p className="blog-home-post-excerpt">
-          {RichText.asText(item.node.standfirst)}
-        </p>
-        <div className="blog-home-post-button-wrapper">
-          <Link className="a-button" to={linkResolver(item.node._meta)}>
-            Read post
-          </Link>
-        </div>
-      </article>
+      <Link className="bubble" to={linkResolver(item.node._meta)}>      
+        <article className="blog-post">
+          <Img className="blog-home-post-image" fluid={item.node.imageSharp.childImageSharp.fluid} alt={item.node.image.alt} />
+          <h2 className="blog-home-post-title">
+            {RichText.asText(item.node.title)}
+          </h2>
+          <p className="blog-home-post-excerpt">
+            {RichText.asText(item.node.standfirst)}
+          </p>
+          <div className="blog-home-post-button-wrapper">
+            <Link className="link-text" to={linkResolver(item.node._meta)}>
+              Read post
+            </Link>
+          </div>
+        </article>
+      </Link>
     </div>
   )
 }

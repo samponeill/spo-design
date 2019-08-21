@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  padding: 0 32px;
+  padding: 0.5rem 2rem;
   border: $borderstyle $links;
+  background-color: $links;
   border-bottom: 2px solid $links;  
-  border-radius: 0px;
-  color: $links;
+  border-radius: $rad;
+  color: white;
   font-weight: 500;
   white-space: nowrap;
   transition-property: background-color, color;
@@ -15,10 +16,16 @@
   font-family: $font-secondary;
   text-transform: uppercase;
   letter-spacing: 0.2px;
-
+  line-height: 1.5;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: scale(1);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  box-shadow: 0 0 0 $links;
   &:hover {
-    background-color: $links;
-    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 6px $links;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
 }
 

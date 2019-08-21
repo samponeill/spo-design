@@ -3,16 +3,19 @@
   padding: 90px 0;
   background: $primary;
   background-size: 250% 250%;
+  max-width: 1190px;
+  border-radius: $rad;
+  margin: auto auto 3rem auto;  
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  max-width: 1190px;
-  padding: 0 15px;
+  padding: 0 2rem;
   margin: 0 auto;
   a {
     font-family: $font-secondary;
+    color: white;
   }  
 
   @media (max-width: 1000px) {

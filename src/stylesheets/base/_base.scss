@@ -7,7 +7,8 @@ html {
 
 body {
   @include gradient();
-	animation: gradientBG 15s ease infinite;
+  animation: gradientBG 15s ease infinite;
+  padding-bottom: 3rem;
 }
 
 @keyframes gradientBG {

@@ -51,8 +51,8 @@
 }
 
 .products-grid-item-wrapper {
-  max-width: 366px;
-  margin: 70px 15px 0;
+  max-width: calc(100% / 3);
+  margin: 70px 2rem 0;
 }
 
 .products-grid-item-image {
@@ -68,8 +68,13 @@
   text-align: center;
 
   &::before {
-    content: "⇥";
+    content: "[ ";
+    color: $links;
   }
+  &::after {
+    content: " ⇥ ]";
+    color: $links;
+  }  
 }
 
 .products-grid-item-subtitle {

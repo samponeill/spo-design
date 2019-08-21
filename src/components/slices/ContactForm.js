@@ -43,6 +43,7 @@ class ContactForm extends Component {
     render() {
       return (
         <form
+        className="contact-form"
         name="contact"
         method="post"
         action="/success/"
@@ -59,28 +60,26 @@ class ContactForm extends Component {
           </label>
         </p>
         <div className="grid-form">
-            <p>
-                <label for="name">
-                    Name*
-                </label>
-                <input arial-label="Name" type="text" name="name" onChange={this.handleChange} />
-            </p>
-            <p>
-                <label for="email">
-                    Email*
-                </label>
-                <input arial-label="Email" type="email" name="email" onChange={this.handleChange} />
-            </p>
+          <div className="grid-form__twocolumns">
+            <label for="name">
+              Name*
+            </label>
+            <input arial-label="Name" type="text" name="name" onChange={this.handleChange} />
+          </div>
+          <div className="grid-form__twocolumns">
+              <label for="email">
+                  Email*
+              </label>
+              <input arial-label="Email" type="email" name="email" onChange={this.handleChange} />
+          </div>
         </div>            
-        <p>
             <label for="message">
                 Message*
             </label>
             <textarea arial-label="Message box" name="message" onChange={this.handleChange} />
-        </p>
-        <p>
-          <button className="shadow" type="submit">Send</button>
-        </p>
+          <div className="grid-form">
+            <button type="submit">Send</button>
+          </div>
       </form>
     )
     }
