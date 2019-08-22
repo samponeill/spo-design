@@ -12,7 +12,7 @@
 
 .blog-home-post-wrapper {
   &:not(:first-child) {
-    border-top: 1px solid #d6d6d6;
+    border-top: $borderstyle $primary;
     margin-top: 60px;
     padding-top: 60px;
   }
