@@ -122,20 +122,21 @@ const RenderBody = ({ product }) => (
           </div>
         </div>
       </section>
-
-      <section className="product-description">
-        <div className="l-wrapper">
-          <div className="product-description-title">
-            {RichText.render(product.title, linkResolver)}
+      <div class="l-wrapper">
+        <article className="blog-post-article">
+          <div className="blog-post-inner">
+            <div className="blog-post-title">
+              {RichText.render(product.title, linkResolver)}
+            </div>
+            <div className="blog-post-rich-content">
+              {RichText.render(product.case_study_description, linkResolver)}
+            </div>
+            <div className="homepage-slices-wrapper">
+              <RenderSlices slices={product.body} />
+            </div>
           </div>
-          <div className="product-description-content">
-            {RichText.render(product.case_study_description, linkResolver)}
-          </div>
-          <div className="homepage-slices-wrapper">
-            <RenderSlices slices={product.body} />
-          </div>
-        </div>
-      </section>
+        </article>
+      </div>
 
       <div className="product-separator-wrapper">
         <div className="l-wrapper">
