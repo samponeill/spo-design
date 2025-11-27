@@ -8,7 +8,7 @@
     "@debiki/gatsby-plugin-talkyard": "^0.5.8",
     "bulma": "^0.7.5",
     "cli": "^1.0.1",
-    "gatsby": "^2.9.0",
+    "gatsby": "^5.15.0",
     "gatsby-awesome-pagination": "^0.3.4",
     "gatsby-background-image": "^0.6.2",
     "gatsby-image": "^2.1.0",
